@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D8104FAE54947EAF3E54C8F /* Pods_MadridShopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79799D3D4DB11726C13DB32B /* Pods_MadridShopsTests.framework */; };
+		5FD5E4C137936E4DE50B7C9D /* Pods_MadridShops.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150D39E549C4E8A7F64793C4 /* Pods_MadridShops.framework */; };
+		B60EF6511F61D006000BCB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6501F61D006000BCB96 /* AppDelegate.swift */; };
+		B60EF6531F61D006000BCB96 /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6521F61D006000BCB96 /* ShopsViewController.swift */; };
+		B60EF6561F61D006000BCB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6541F61D006000BCB96 /* Main.storyboard */; };
+		B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6571F61D006000BCB96 /* Assets.xcassets */; };
+		B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */; };
+		B60EF6741F61D2DD000BCB96 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6731F61D2DD000BCB96 /* Shop.swift */; };
+		B60EF6761F61D4EF000BCB96 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6751F61D4EF000BCB96 /* Shops.swift */; };
+		B60EF67B1F61DA8A000BCB96 /* ShopsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67A1F61DA8A000BCB96 /* ShopsTest.swift */; };
+		B60EF67E1F61E157000BCB96 /* DownloadAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67D1F61E157000BCB96 /* DownloadAllShopsInteractor.swift */; };
+		B60EF6801F6404A1000BCB96 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67F1F6404A1000BCB96 /* Typealias.swift */; };
+		B60EF6821F64051A000BCB96 /* DownloadAllShopsInteractorFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6811F64051A000BCB96 /* DownloadAllShopsInteractorFakeImpl.swift */; };
+		B60EF6851F641109000BCB96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60EF6841F641109000BCB96 /* MapKit.framework */; };
+		B60EF6871F641336000BCB96 /* ViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */; };
+		B60EF6891F6416D1000BCB96 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6881F6416D1000BCB96 /* ShopCell.swift */; };
+		B68B433C1F671228005B1A88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B68B433B1F671228005B1A88 /* Podfile */; };
+		B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B433D1F671DF9005B1A88 /* MainViewController.swift */; };
+		B69B66111F6C4F02004F8511 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66101F6C4F02004F8511 /* ShopDetailViewController.swift */; };
+		B6B264E51F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E41F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift */; };
+		B6B264E81F6B0D790031EBD0 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E71F6B0D790031EBD0 /* JsonParser.swift */; };
+		B6B264EA1F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E91F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B60EF6621F61D006000BCB96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B60EF6451F61D006000BCB96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B60EF64C1F61D006000BCB96;
+			remoteInfo = MadridShops;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		150D39E549C4E8A7F64793C4 /* Pods_MadridShops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridShops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C876B3423C454A3C9E1A79F /* Pods-MadridShopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4263386CD156C2E179218437 /* Pods-MadridShops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops.debug.xcconfig"; sourceTree = "<group>"; };
+		61E42D1DFEAB4E8596392523 /* Pods-MadridShopsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShopsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests.release.xcconfig"; sourceTree = "<group>"; };
+		79799D3D4DB11726C13DB32B /* Pods_MadridShopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridShopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60EF64D1F61D006000BCB96 /* MadridShops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShops.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60EF6501F61D006000BCB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B60EF6521F61D006000BCB96 /* ShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
+		B60EF6551F61D006000BCB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B60EF6571F61D006000BCB96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B60EF65A1F61D006000BCB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B60EF65C1F61D006000BCB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60EF6611F61D006000BCB96 /* MadridShopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadridShopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60EF6671F61D006000BCB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60EF6731F61D2DD000BCB96 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		B60EF6751F61D4EF000BCB96 /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
+		B60EF6791F61DA89000BCB96 /* MadridShopsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MadridShopsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B60EF67A1F61DA8A000BCB96 /* ShopsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTest.swift; sourceTree = "<group>"; };
+		B60EF67D1F61E157000BCB96 /* DownloadAllShopsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractor.swift; sourceTree = "<group>"; };
+		B60EF67F1F6404A1000BCB96 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		B60EF6811F64051A000BCB96 /* DownloadAllShopsInteractorFakeImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorFakeImpl.swift; sourceTree = "<group>"; };
+		B60EF6841F641109000BCB96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
+		B60EF6881F6416D1000BCB96 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		B60EF68B1F6454B2000BCB96 /* unicorn_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unicorn_icon.png; sourceTree = "<group>"; };
+		B68B433B1F671228005B1A88 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B68B433D1F671DF9005B1A88 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B69B66101F6C4F02004F8511 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		B6B264E41F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSOpImpl.swift; sourceTree = "<group>"; };
+		B6B264E71F6B0D790031EBD0 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		B6B264E91F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
+		E251F2ABD29E6D75CD9BC033 /* Pods-MadridShops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShops.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B60EF64A1F61D006000BCB96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60EF6851F641109000BCB96 /* MapKit.framework in Frameworks */,
+				5FD5E4C137936E4DE50B7C9D /* Pods_MadridShops.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60EF65E1F61D006000BCB96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8104FAE54947EAF3E54C8F /* Pods_MadridShopsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B60EF6441F61D006000BCB96 = {
+			isa = PBXGroup;
+			children = (
+				B68B433B1F671228005B1A88 /* Podfile */,
+				B60EF64F1F61D006000BCB96 /* MadridShops */,
+				B60EF6641F61D006000BCB96 /* MadridShopsTests */,
+				B60EF64E1F61D006000BCB96 /* Products */,
+				B60EF6831F641109000BCB96 /* Frameworks */,
+				D8E4A805331A3A98631AF93A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B60EF64E1F61D006000BCB96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF64D1F61D006000BCB96 /* MadridShops.app */,
+				B60EF6611F61D006000BCB96 /* MadridShopsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B60EF64F1F61D006000BCB96 /* MadridShops */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF6501F61D006000BCB96 /* AppDelegate.swift */,
+				B60EF6721F61D19E000BCB96 /* Model */,
+				B60EF6711F61D19A000BCB96 /* View */,
+				B60EF6701F61D193000BCB96 /* Controller */,
+				B60EF68A1F64549E000BCB96 /* Assets */,
+				B60EF65C1F61D006000BCB96 /* Info.plist */,
+			);
+			path = MadridShops;
+			sourceTree = "<group>";
+		};
+		B60EF6641F61D006000BCB96 /* MadridShopsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF6671F61D006000BCB96 /* Info.plist */,
+				B60EF67A1F61DA8A000BCB96 /* ShopsTest.swift */,
+				B60EF6791F61DA89000BCB96 /* MadridShopsTests-Bridging-Header.h */,
+			);
+			path = MadridShopsTests;
+			sourceTree = "<group>";
+		};
+		B60EF6701F61D193000BCB96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF6521F61D006000BCB96 /* ShopsViewController.swift */,
+				B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */,
+				B68B433D1F671DF9005B1A88 /* MainViewController.swift */,
+				B69B66101F6C4F02004F8511 /* ShopDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B60EF6711F61D19A000BCB96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF6541F61D006000BCB96 /* Main.storyboard */,
+				B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */,
+				B60EF6881F6416D1000BCB96 /* ShopCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B60EF6721F61D19E000BCB96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6B264E61F6B0D610031EBD0 /* JsonParser */,
+				B60EF67C1F61E077000BCB96 /* Interactors */,
+				B60EF6731F61D2DD000BCB96 /* Shop.swift */,
+				B60EF6751F61D4EF000BCB96 /* Shops.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B60EF67C1F61E077000BCB96 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF67D1F61E157000BCB96 /* DownloadAllShopsInteractor.swift */,
+				B60EF6811F64051A000BCB96 /* DownloadAllShopsInteractorFakeImpl.swift */,
+				B6B264E41F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift */,
+				B6B264E91F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift */,
+				B60EF67F1F6404A1000BCB96 /* Typealias.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		B60EF6831F641109000BCB96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF6841F641109000BCB96 /* MapKit.framework */,
+				150D39E549C4E8A7F64793C4 /* Pods_MadridShops.framework */,
+				79799D3D4DB11726C13DB32B /* Pods_MadridShopsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B60EF68A1F64549E000BCB96 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B60EF68B1F6454B2000BCB96 /* unicorn_icon.png */,
+				B60EF6571F61D006000BCB96 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B6B264E61F6B0D610031EBD0 /* JsonParser */ = {
+			isa = PBXGroup;
+			children = (
+				B6B264E71F6B0D790031EBD0 /* JsonParser.swift */,
+			);
+			path = JsonParser;
+			sourceTree = "<group>";
+		};
+		D8E4A805331A3A98631AF93A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4263386CD156C2E179218437 /* Pods-MadridShops.debug.xcconfig */,
+				E251F2ABD29E6D75CD9BC033 /* Pods-MadridShops.release.xcconfig */,
+				1C876B3423C454A3C9E1A79F /* Pods-MadridShopsTests.debug.xcconfig */,
+				61E42D1DFEAB4E8596392523 /* Pods-MadridShopsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B60EF64C1F61D006000BCB96 /* MadridShops */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60EF66A1F61D006000BCB96 /* Build configuration list for PBXNativeTarget "MadridShops" */;
+			buildPhases = (
+				B63D0CD1B629701C4E129B16 /* [CP] Check Pods Manifest.lock */,
+				B60EF6491F61D006000BCB96 /* Sources */,
+				B60EF64A1F61D006000BCB96 /* Frameworks */,
+				B60EF64B1F61D006000BCB96 /* Resources */,
+				BF21DD61B4F84FE799070732 /* [CP] Embed Pods Frameworks */,
+				920C73D0C44E60BCC33CDE2B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MadridShops;
+			productName = MadridShops;
+			productReference = B60EF64D1F61D006000BCB96 /* MadridShops.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B60EF6601F61D006000BCB96 /* MadridShopsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60EF66D1F61D006000BCB96 /* Build configuration list for PBXNativeTarget "MadridShopsTests" */;
+			buildPhases = (
+				4A0D998F48537DD9B156A2CF /* [CP] Check Pods Manifest.lock */,
+				B60EF65D1F61D006000BCB96 /* Sources */,
+				B60EF65E1F61D006000BCB96 /* Frameworks */,
+				B60EF65F1F61D006000BCB96 /* Resources */,
+				8B6B151520A4769DCBF30EDC /* [CP] Embed Pods Frameworks */,
+				134DDEA2793672CEA02D1754 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B60EF6631F61D006000BCB96 /* PBXTargetDependency */,
+			);
+			name = MadridShopsTests;
+			productName = MadridShopsTests;
+			productReference = B60EF6611F61D006000BCB96 /* MadridShopsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B60EF6451F61D006000BCB96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Gema;
+				TargetAttributes = {
+					B60EF64C1F61D006000BCB96 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B60EF6601F61D006000BCB96 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B60EF64C1F61D006000BCB96;
+					};
+				};
+			};
+			buildConfigurationList = B60EF6481F61D006000BCB96 /* Build configuration list for PBXProject "MadridShops" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B60EF6441F61D006000BCB96;
+			productRefGroup = B60EF64E1F61D006000BCB96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B60EF64C1F61D006000BCB96 /* MadridShops */,
+				B60EF6601F61D006000BCB96 /* MadridShopsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B60EF64B1F61D006000BCB96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */,
+				B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */,
+				B68B433C1F671228005B1A88 /* Podfile in Resources */,
+				B60EF6561F61D006000BCB96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60EF65F1F61D006000BCB96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134DDEA2793672CEA02D1754 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A0D998F48537DD9B156A2CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MadridShopsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B6B151520A4769DCBF30EDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FillableLoaders/FillableLoaders.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FillableLoaders.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		920C73D0C44E60BCC33CDE2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B63D0CD1B629701C4E129B16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MadridShops-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF21DD61B4F84FE799070732 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FillableLoaders/FillableLoaders.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FillableLoaders.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B60EF6491F61D006000BCB96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60EF6741F61D2DD000BCB96 /* Shop.swift in Sources */,
+				B60EF6891F6416D1000BCB96 /* ShopCell.swift in Sources */,
+				B6B264E81F6B0D790031EBD0 /* JsonParser.swift in Sources */,
+				B60EF6531F61D006000BCB96 /* ShopsViewController.swift in Sources */,
+				B60EF6511F61D006000BCB96 /* AppDelegate.swift in Sources */,
+				B60EF6821F64051A000BCB96 /* DownloadAllShopsInteractorFakeImpl.swift in Sources */,
+				B60EF6761F61D4EF000BCB96 /* Shops.swift in Sources */,
+				B6B264E51F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift in Sources */,
+				B60EF6871F641336000BCB96 /* ViewController+CollectionViewController.swift in Sources */,
+				B6B264EA1F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */,
+				B60EF6801F6404A1000BCB96 /* Typealias.swift in Sources */,
+				B69B66111F6C4F02004F8511 /* ShopDetailViewController.swift in Sources */,
+				B60EF67E1F61E157000BCB96 /* DownloadAllShopsInteractor.swift in Sources */,
+				B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60EF65D1F61D006000BCB96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60EF67B1F61DA8A000BCB96 /* ShopsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B60EF6631F61D006000BCB96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B60EF64C1F61D006000BCB96 /* MadridShops */;
+			targetProxy = B60EF6621F61D006000BCB96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B60EF6541F61D006000BCB96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60EF6551F61D006000BCB96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60EF65A1F61D006000BCB96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B60EF6681F61D006000BCB96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B60EF6691F61D006000BCB96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B60EF66B1F61D006000BCB96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4263386CD156C2E179218437 /* Pods-MadridShops.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2Q64N542W;
+				INFOPLIST_FILE = MadridShops/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmb.MadridShops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B60EF66C1F61D006000BCB96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E251F2ABD29E6D75CD9BC033 /* Pods-MadridShops.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2Q64N542W;
+				INFOPLIST_FILE = MadridShops/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmb.MadridShops;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B60EF66E1F61D006000BCB96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C876B3423C454A3C9E1A79F /* Pods-MadridShopsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2Q64N542W;
+				INFOPLIST_FILE = MadridShopsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmb.MadridShopsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MadridShopsTests/MadridShopsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MadridShops.app/MadridShops";
+			};
+			name = Debug;
+		};
+		B60EF66F1F61D006000BCB96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E42D1DFEAB4E8596392523 /* Pods-MadridShopsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2Q64N542W;
+				INFOPLIST_FILE = MadridShopsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmb.MadridShopsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MadridShopsTests/MadridShopsTests-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MadridShops.app/MadridShops";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B60EF6481F61D006000BCB96 /* Build configuration list for PBXProject "MadridShops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60EF6681F61D006000BCB96 /* Debug */,
+				B60EF6691F61D006000BCB96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B60EF66A1F61D006000BCB96 /* Build configuration list for PBXNativeTarget "MadridShops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60EF66B1F61D006000BCB96 /* Debug */,
+				B60EF66C1F61D006000BCB96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B60EF66D1F61D006000BCB96 /* Build configuration list for PBXNativeTarget "MadridShopsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60EF66E1F61D006000BCB96 /* Debug */,
+				B60EF66F1F61D006000BCB96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B60EF6451F61D006000BCB96 /* Project object */;
+}
