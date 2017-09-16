@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2">
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="CCW-f3-UcB">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="qMA-EQ-6vd"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="qMA-EQ-6vd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -155,7 +155,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-Wr-uMI" userLabel="description">
                                 <rect key="frame" x="16" y="97" width="343" height="277"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </mutableString>
+                                <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

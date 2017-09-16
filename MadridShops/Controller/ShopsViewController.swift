@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ShopsViewController: UIViewController {
 
     @IBOutlet weak var shopsCollectionView: UICollectionView!
     var shops: Shops?
+    var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,12 @@ class ShopsViewController: UIViewController {
             
             self.shopsCollectionView.delegate = self
             self.shopsCollectionView.dataSource = self
+            
+            // save the shops in core data
+            let cacheInteractor = SaveAllShopsInteractorImpl()
+            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
+                print("Shops downloaded and saved correctly!")
+            })
         }
     
     }
@@ -55,7 +63,7 @@ class ShopsViewController: UIViewController {
             //let indexPath = self.shopsCollectionView.indexPathsForSelectedItems![0]
             //let shop = self.shops?.get(index: indexPath.row)
             
-            vc.shop = sender as! Shop
+            vc.shop = sender as? Shop
             
         }
     }

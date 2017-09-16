@@ -8,9 +8,12 @@
 
 import UIKit
 import FillableLoaders
+import CoreData
 
 class MainViewController: UIViewController {
 
+    var context: NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,4 +38,10 @@ class MainViewController: UIViewController {
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowShopsSegue" {
+            let vc = segue.destination as! ShopsViewController
+            vc.context = self.context
+        }
+    }
 }
