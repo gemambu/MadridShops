@@ -20,6 +20,7 @@ class ShopDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = self.shop?.name
         self.descriptionView.text = self.shop?.description
+        self.shop?.image.loadImage(into: imageView)
         
     }
     

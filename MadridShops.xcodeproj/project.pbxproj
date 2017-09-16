@@ -26,6 +26,7 @@
 		B68B433C1F671228005B1A88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B68B433B1F671228005B1A88 /* Podfile */; };
 		B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B433D1F671DF9005B1A88 /* MainViewController.swift */; };
 		B69B66111F6C4F02004F8511 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66101F6C4F02004F8511 /* ShopDetailViewController.swift */; };
+		B69B66141F6D20FB004F8511 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66131F6D20FB004F8511 /* String+Image.swift */; };
 		B6B264E51F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E41F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift */; };
 		B6B264E81F6B0D790031EBD0 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E71F6B0D790031EBD0 /* JsonParser.swift */; };
 		B6B264EA1F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E91F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift */; };
@@ -70,6 +71,7 @@
 		B68B433B1F671228005B1A88 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B68B433D1F671DF9005B1A88 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B69B66101F6C4F02004F8511 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		B69B66131F6D20FB004F8511 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		B6B264E41F6B02BE0031EBD0 /* DownloadAllShopsInteractorNSOpImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSOpImpl.swift; sourceTree = "<group>"; };
 		B6B264E71F6B0D790031EBD0 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		B6B264E91F6B0FB40031EBD0 /* DownloadAllShopsInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B60EF6501F61D006000BCB96 /* AppDelegate.swift */,
+				B69B66121F6D20D3004F8511 /* Util */,
 				B60EF6721F61D19E000BCB96 /* Model */,
 				B60EF6711F61D19A000BCB96 /* View */,
 				B60EF6701F61D193000BCB96 /* Controller */,
@@ -202,6 +205,14 @@
 				B60EF6571F61D006000BCB96 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		B69B66121F6D20D3004F8511 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B69B66131F6D20FB004F8511 /* String+Image.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		B6B264E61F6B0D610031EBD0 /* JsonParser */ = {
@@ -458,6 +469,7 @@
 				B69B66111F6C4F02004F8511 /* ShopDetailViewController.swift in Sources */,
 				B60EF67E1F61E157000BCB96 /* DownloadAllShopsInteractor.swift in Sources */,
 				B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */,
+				B69B66141F6D20FB004F8511 /* String+Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
