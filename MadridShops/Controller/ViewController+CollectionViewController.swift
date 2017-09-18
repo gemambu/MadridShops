@@ -1,27 +1,26 @@
 import UIKit
+import CoreData
 
 extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let shops = self.shops {
-            return shops.count()
-        }
-        return 0
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let shopCell: ShopCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell", for: indexPath) as! ShopCell
 
-        let shop: Shop = (self.shops?.get(index: indexPath.row))!
-        shopCell.refresh(shop: shop)
+        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
+        shopCell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
         return shopCell
     }
     
-   
+    
  
     
     
