@@ -12,58 +12,54 @@ import CoreData
 class ShopsViewController: UIViewController {
 
     @IBOutlet weak var shopsCollectionView: UICollectionView!
-    var shops: Shops?
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // let downloadShopsInteractor: DownloadAllShopsInteractor = DownloadAllShopsInteractorNSOpImpl()
-        let downloadShopsInteractor: DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
-        /*
-        downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
-            // todo OK
-        }) { (error: Error) in
-            // ha habido error
+        ExecuteOnceInteractorImpl().execute{
+            initializeData()
         }
-
-        downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
-            // todo OK
-        })
- */
+    
+        self.shopsCollectionView.delegate = self
+        self.shopsCollectionView.dataSource = self
+        
+    }
+    
+    func initializeData() {
+        let downloadShopsInteractor: DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
         
         downloadShopsInteractor.execute{ (shops: Shops) in
             // todo OK
             print("Name: " + shops.get(index: 0).name)
-            self.shops = shops
-        
             
             // save the shops in core data
             let cacheInteractor = SaveAllShopsInteractorImpl()
-            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
+            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops)
+                in
                 print("Shops downloaded and saved correctly!")
+                
+                SetExecutedOnceInteractorImpl().execute()
+                
+                self._fetchedResultsController = nil
                 self.shopsCollectionView.delegate = self
                 self.shopsCollectionView.dataSource = self
+                self.shopsCollectionView.reloadData()
             })
         }
-    
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let shop = self.shops?.get(index: indexPath.row)
-        self.performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop)
+        let shopCD = self.fetchedResultsController.object(at: indexPath)
+        self.performSegue(withIdentifier: "ShowShopDetailSegue", sender: shopCD)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowShopDetailSegue" {
             let vc = segue.destination as! ShopDetailViewController
-            
-            //let indexPath = self.shopsCollectionView.indexPathsForSelectedItems![0]
-            //let shop = self.shops?.get(index: indexPath.row)
-            
-            vc.shop = sender as? Shop
+            let shopCD: ShopCD =  sender as! ShopCD
+            vc.shop = mapShopCDIntoShop(shopCD: shopCD)
             
         }
     }
