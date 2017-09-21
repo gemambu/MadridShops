@@ -1,21 +1,22 @@
-//
-//  ViewController.swift
-//  MadridShops
-//
-//  Created by Gema on 7/9/17.
-//  Copyright © 2017 Gema. All rights reserved.
-//
-
 import UIKit
 import CoreData
+import CoreLocation
+import MapKit
 
-class ShopsViewController: UIViewController {
+class ShopsViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var shopsCollectionView: UICollectionView!
     var context: NSManagedObjectContext!
     
+    @IBOutlet weak var map: MKMapView!
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.delegate = self
+        self.locationManager.startUpdatingLocation()
         
         ExecuteOnceInteractorImpl().execute{
             initializeData()
@@ -23,6 +24,9 @@ class ShopsViewController: UIViewController {
     
         self.shopsCollectionView.delegate = self
         self.shopsCollectionView.dataSource = self
+        
+        let madridLocation = CLLocation(latitude:40.41889 , longitude: -3.69194)
+        self.map.setCenter(madridLocation.coordinate, animated: true)
         
     }
     
@@ -99,6 +103,10 @@ class ShopsViewController: UIViewController {
         return _fetchedResultsController!
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        self.map.setCenter(location.coordinate, animated: true)
+    }
 
 
 }
