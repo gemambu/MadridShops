@@ -1,7 +1,7 @@
 import UIKit
 
-class ShopCell: UICollectionViewCell {
-    var shop: Shop?
+class EntityCell: UICollectionViewCell {
+    var entity: Entity?
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -9,13 +9,13 @@ class ShopCell: UICollectionViewCell {
     
     @IBOutlet weak var openingHours: UILabel!
     
-    func refresh(shop: Shop) {
-        self.shop = shop
+    func refresh(entity: Entity) {
+        self.entity = entity
         
-        self.label.text = self.shop?.name
-        self.openingHours.text = self.shop?.openingHours
+        self.label.text = self.entity?.name
+        self.openingHours.text = self.entity?.openingHours
         
-        self.shop?.logo.loadImage(into: imageView)
+        self.entity?.logo.loadImage(into: imageView)
         imageView.clipsToBounds = true
         UIView.animate(withDuration: 1.0) {
             self.imageView.layer.cornerRadius = 30

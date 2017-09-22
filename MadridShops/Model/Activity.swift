@@ -1,9 +1,8 @@
 import Foundation
 
-class Shop : Entity {
+class Activity : Entity {
     
     override func getType() -> String {
-        return "Shop"
+        return "Activity"
     }
 }
-

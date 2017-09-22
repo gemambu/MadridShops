@@ -3,9 +3,9 @@ import CoreData
 import CoreLocation
 import MapKit
 
-class ShopsViewController: UIViewController, CLLocationManagerDelegate {
+class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var shopsCollectionView: UICollectionView!
+    @IBOutlet weak var entitiesCollectionView: UICollectionView!
     var context: NSManagedObjectContext!
     
     @IBOutlet weak var map: MKMapView!
@@ -22,8 +22,8 @@ class ShopsViewController: UIViewController, CLLocationManagerDelegate {
             initializeData()
         }
     
-        self.shopsCollectionView.delegate = self
-        self.shopsCollectionView.dataSource = self
+        self.entitiesCollectionView.delegate = self
+        self.entitiesCollectionView.dataSource = self
         
         let madridLocation = CLLocation(latitude:40.41889 , longitude: -3.69194)
         self.map.setCenter(madridLocation.coordinate, animated: true)
@@ -31,53 +31,53 @@ class ShopsViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func initializeData() {
-        let downloadShopsInteractor: DownloadAllShopsInteractor = DownloadAllShopsInteractorNSURLSessionImpl()
+        let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorNSURLSessionImpl()
         
-        downloadShopsInteractor.execute{ (shops: Shops) in
+        downloadEntitiesInteractor.execute{ (entities: Entities) in
             // todo OK
-            print("Name: " + shops.get(index: 0).name)
+            print("Name: " + entities.get(index: 0).name)
             
-            // save the shops in core data
-            let cacheInteractor = SaveAllShopsInteractorImpl()
-            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops)
+            // save the entities in core data
+            let cacheInteractor = SaveAllEntitiesInteractorImpl()
+            cacheInteractor.execute(entities: entities, context: self.context, onSuccess: { (entities: Entities)
                 in
-                print("Shops downloaded and saved correctly!")
+                print("Entities downloaded and saved correctly!")
                 
                 SetExecutedOnceInteractorImpl().execute()
                 
                 self._fetchedResultsController = nil
-                self.shopsCollectionView.delegate = self
-                self.shopsCollectionView.dataSource = self
-                self.shopsCollectionView.reloadData()
+                self.entitiesCollectionView.delegate = self
+                self.entitiesCollectionView.dataSource = self
+                self.entitiesCollectionView.reloadData()
             })
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let shopCD = self.fetchedResultsController.object(at: indexPath)
-        self.performSegue(withIdentifier: "ShowShopDetailSegue", sender: shopCD)
+        let entityCD = self.fetchedResultsController.object(at: indexPath)
+        self.performSegue(withIdentifier: "ShowEntityDetailSegue", sender: entityCD)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowShopDetailSegue" {
-            let vc = segue.destination as! ShopDetailViewController
-            let shopCD: ShopCD =  sender as! ShopCD
-            vc.shop = mapShopCDIntoShop(shopCD: shopCD)
+        if segue.identifier == "ShowEntityDetailSegue" {
+            let vc = segue.destination as! EntityDetailViewController
+            let entityCD: EntityCD =  sender as! EntityCD
+            vc.entity = mapEntityCDIntoEntity(entityCD: entityCD)
             
         }
     }
     
     // MARK: - Fetched results controller
     
-    var _fetchedResultsController: NSFetchedResultsController<ShopCD>? = nil
+    var _fetchedResultsController: NSFetchedResultsController<EntityCD>? = nil
     
-    var fetchedResultsController: NSFetchedResultsController<ShopCD> {
+    var fetchedResultsController: NSFetchedResultsController<EntityCD> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-        let fetchRequest: NSFetchRequest<ShopCD> = ShopCD.fetchRequest()
+        let fetchRequest: NSFetchRequest<EntityCD> = EntityCD.fetchRequest()
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
@@ -88,7 +88,7 @@ class ShopsViewController: UIViewController, CLLocationManagerDelegate {
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
         // fetchedRequest == SELECT * FROM EVENT PRDER BY TIMESTAMP DESC
-        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "ShopsChacheFile")
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "EntitiesChacheFile")
         //aFetchedResultsController.delegate = self
         
         do {

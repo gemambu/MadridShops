@@ -1,4 +1,4 @@
 import Foundation
 
 typealias errorClosure = ((Error) -> Void)?
-typealias successClosure = (Shops) -> Void
+typealias successClosure = (Entities) -> Void

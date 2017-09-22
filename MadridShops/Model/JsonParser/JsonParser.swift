@@ -1,36 +1,30 @@
-//
-//  JsonParser.swift
-//  MadridShops
-//
-//  Created by Gema on 14/9/17.
-//  Copyright © 2017 Gema. All rights reserved.
-//
 
 import Foundation
 
-func parseShops(data: Data) -> Shops {
-    let shops = Shops()
+func parseEntities(data: Data, type: String) -> Entities {
+    let entities = Entities()
     do {
         let jsonObject = try JSONSerialization.jsonObject(with: data, options:
             JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>
         let result = jsonObject["result"] as! [Dictionary<String, Any>]
         
-        for shopJson in result {
-            let shop = Shop(name: shopJson["name"] as! String)
-            shop.address = shopJson["address"] as! String
-            shop.description = shopJson["description_en"] as! String
-            shop.latitude = shopJson["gps_lat"] as? Float
-            shop.longitude = shopJson["gps_lon"] as? Float
-            shop.image = shopJson["img"] as! String
-            shop.logo = shopJson["logo_img"] as! String
-            shop.openingHours = shopJson["opening_hours_en"] as! String
+        for entityJson in result {
+            let entity = Entity(name: entityJson["name"] as! String)
+            entity.address = entityJson["address"] as! String
+            entity.description = entityJson["description_en"] as! String
+            entity.latitude = entityJson["gps_lat"] as? Float
+            entity.longitude = entityJson["gps_lon"] as? Float
+            entity.image = entityJson["img"] as! String
+            entity.logo = entityJson["logo_img"] as! String
+            entity.openingHours = entityJson["opening_hours_en"] as! String
+            entity.type = type
             
-            shops.add(shop: shop)
+            entities.add(entity: entity)
         }
     } catch {
         print("Error parsing JSON")
     }
     
-    return shops
+    return entities
     
 }

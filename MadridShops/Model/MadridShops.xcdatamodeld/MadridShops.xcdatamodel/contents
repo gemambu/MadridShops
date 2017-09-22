@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13233.4" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ShopCD" representedClassName="ShopCD" syncable="YES" codeGenerationType="class">
+    <entity name="EntityCD" representedClassName="EntityCD" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,8 +9,9 @@
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="2" syncable="YES"/>
         <attribute name="openingHours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ShopCD" positionX="-54" positionY="-9" width="128" height="165"/>
+        <element name="EntityCD" positionX="-54" positionY="-9" width="128" height="180"/>
     </elements>
 </model>

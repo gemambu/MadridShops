@@ -1,11 +1,3 @@
-//
-//  MainViewController.swift
-//  MadridShops
-//
-//  Created by Gema on 11/9/17.
-//  Copyright © 2017 Gema. All rights reserved.
-//
-
 import UIKit
 import FillableLoaders
 import CoreData
@@ -39,8 +31,8 @@ class MainViewController: UIViewController {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowShopsSegue" {
-            let vc = segue.destination as! ShopsViewController
+        if segue.identifier == "ShowEntitiesSegue" {
+            let vc = segue.destination as! EntitiesViewController
             vc.context = self.context
         }
     }

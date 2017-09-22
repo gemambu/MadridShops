@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainVC = nav.topViewController as! MainViewController
         mainVC.context = self.context
         
-        // VIPER: View Interacor Presenter Entity Router
-        
         
         return true
     }

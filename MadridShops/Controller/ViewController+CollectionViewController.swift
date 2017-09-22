@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension EntitiesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
@@ -13,11 +13,11 @@ extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let shopCell: ShopCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell", for: indexPath) as! ShopCell
+        let entityCell: EntityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EntityCell", for: indexPath) as! EntityCell
 
-        let shopCD: ShopCD = fetchedResultsController.object(at: indexPath)
-        shopCell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
-        return shopCell
+        let entityCD: EntityCD = fetchedResultsController.object(at: indexPath)
+        entityCell.refresh(entity: mapEntityCDIntoEntity(entityCD: entityCD))
+        return entityCell
     }
     
     

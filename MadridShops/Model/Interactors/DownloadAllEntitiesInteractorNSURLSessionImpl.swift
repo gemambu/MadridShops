@@ -1,18 +1,19 @@
-//
-//  DownloadAllShopsInteractorNSURLSessionImpl.swift
-//  MadridShops
-//
-//  Created by Gema on 14/9/17.
-//  Copyright © 2017 Gema. All rights reserved.
-//
 
 import Foundation
 
-class DownloadAllShopsInteractorNSURLSessionImpl : DownloadAllShopsInteractor {
+class DownloadAllEntitiesInteractorNSURLSessionImpl : DownloadAllEntitiesInteractor {
     func execute(onSuccess: @escaping successClosure, onError: errorClosure) {
-        let urlString = "https://madrid-shops.com/json_new/getShops.php"
+        
+        let urlStringShops = "https://madrid-shops.com/json_new/getShops.php"
+        let urlStringActivities = "http://madrid-shops.com/json_new/getActivities.php"
         
         let session = URLSession.shared
+        downloadEntities(urlStringShops)
+        downloadEntities(urlStringActivities)
+        
+    }
+    
+    func downloadEntities(urlString: String) {
         if let url = URL(string: urlString) {
             let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
                 
@@ -20,8 +21,8 @@ class DownloadAllShopsInteractorNSURLSessionImpl : DownloadAllShopsInteractor {
                     assert(Thread.current == Thread.main)
                     if error == nil {
                         // OK
-                        let shops = parseShops(data: data!)
-                        onSuccess(shops)
+                        let entities = parseEntities(data: data!)
+                        onSuccess(entities)
                     } else {
                         // Error
                         if let myError = onError {
@@ -32,7 +33,6 @@ class DownloadAllShopsInteractorNSURLSessionImpl : DownloadAllShopsInteractor {
             }
             task.resume()
         }
-        
     }
     
     func execute(onSuccess: @escaping successClosure) {

@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="TtR-f2-V53">
@@ -33,30 +38,58 @@
                     <view key="view" contentMode="scaleToFill" id="8Gm-bJ-KPv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-aC-Jyu" userLabel="Activities">
+                                <rect key="frame" x="61" y="436" width="280" height="58"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
+                                <rect key="frame" x="61" y="188" width="253" height="58"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="height" secondItem="yUe-Mc-56G" secondAttribute="height" id="2se-eV-0lq"/>
+                            <constraint firstItem="yUe-Mc-56G" firstAttribute="leading" secondItem="3Kt-8x-Q5e" secondAttribute="leading" constant="61" id="NWC-To-cfk"/>
+                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="leading" secondItem="3Kt-8x-Q5e" secondAttribute="leading" constant="61" id="Nm2-q2-5Li"/>
+                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="centerX" secondItem="3Kt-8x-Q5e" secondAttribute="centerX" id="puK-Y0-c6C"/>
+                            <constraint firstItem="yUe-Mc-56G" firstAttribute="top" secondItem="3Kt-8x-Q5e" secondAttribute="top" constant="124" id="qlh-ft-1I2"/>
+                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="top" secondItem="yUe-Mc-56G" secondAttribute="bottom" constant="190" id="x0G-5R-j77"/>
+                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="width" secondItem="yUe-Mc-56G" secondAttribute="width" id="yyn-MO-5ya"/>
+                            <constraint firstItem="3Kt-8x-Q5e" firstAttribute="bottom" secondItem="NI0-aC-Jyu" secondAttribute="bottom" constant="173" id="zeT-OD-6iL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3Kt-8x-Q5e"/>
                     </view>
                     <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2">
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="CCW-f3-UcB">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="qMA-EQ-6vd"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowEntitiesSegue" id="qMA-EQ-6vd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhQ-Ta-PtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="83"/>
+            <point key="canvasLocation" x="-260" y="82.3088455772114"/>
         </scene>
-        <!--Shops-->
+        <!--Entities-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ShopsViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EntitiesViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G8d-NI-Fvx">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G8d-NI-Fvx" userLabel="Entites Collection View">
                                 <rect key="frame" x="0.0" y="364" width="375" height="303"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r5b-5f-ypV">
@@ -66,7 +99,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="2Tm-VB-vwV" customClass="ShopCell" customModule="MadridShops" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="2Tm-VB-vwV" userLabel="EntityCell" customClass="ShopCell" customModule="MadridShops" customModuleProvider="target">
                                         <rect key="frame" x="18.5" y="0.0" width="338" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -131,21 +164,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shops" id="YeW-MR-rpE"/>
+                    <navigationItem key="navigationItem" title="Entities" id="YeW-MR-rpE"/>
                     <connections>
+                        <outlet property="entitiesCollectionView" destination="G8d-NI-Fvx" id="aKe-MJ-VaO"/>
                         <outlet property="map" destination="IPK-o7-Cip" id="Ooz-kz-Vac"/>
-                        <outlet property="shopsCollectionView" destination="G8d-NI-Fvx" id="BdA-PH-Veo"/>
-                        <segue destination="lc9-lm-XFj" kind="show" identifier="ShowShopDetailSegue" id="ank-jZ-co8"/>
+                        <segue destination="lc9-lm-XFj" kind="show" identifier="ShowEntityDetailSegue" id="ank-jZ-co8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="457" y="84"/>
         </scene>
-        <!--Shop Detail View Controller-->
+        <!--Entity Detail View Controller-->
         <scene sceneID="QLP-Bh-Y6C">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="lc9-lm-XFj" customClass="ShopDetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="lc9-lm-XFj" userLabel="Entity Detail View Controller" customClass="EntityDetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qqd-0v-IPa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,53 +216,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5h-eb-cZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229.5999999999999" y="89.505247376311857"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fxr-pf-9kT">
-            <objects>
-                <viewController id="OM0-zR-Gul" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="11D-mY-Xae">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4G-Zi-fb9">
-                                <rect key="frame" x="0.0" y="76" width="375" height="580"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-NU-2L4">
-                                        <rect key="frame" x="8" y="0.0" width="359" height="258"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQ9-P6-yd0">
-                                        <rect key="frame" x="8" y="266" width="359" height="297"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="LQ9-P6-yd0" firstAttribute="top" secondItem="gjc-NU-2L4" secondAttribute="bottom" constant="8" id="CIf-q7-Df0"/>
-                                    <constraint firstAttribute="bottom" secondItem="LQ9-P6-yd0" secondAttribute="bottom" constant="8" id="D3S-7a-iKv"/>
-                                    <constraint firstAttribute="bottom" secondItem="gjc-NU-2L4" secondAttribute="bottom" constant="313" id="hiF-wt-tOB"/>
-                                    <constraint firstItem="gjc-NU-2L4" firstAttribute="top" secondItem="f4G-Zi-fb9" secondAttribute="top" id="n2A-vs-r47"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="contentSize" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="f4G-Zi-fb9" firstAttribute="top" secondItem="4kS-RE-hGX" secondAttribute="top" constant="56" id="MSr-dt-eYg"/>
-                            <constraint firstItem="4kS-RE-hGX" firstAttribute="bottom" secondItem="f4G-Zi-fb9" secondAttribute="bottom" constant="20" id="PKh-mg-6j7"/>
-                            <constraint firstItem="4kS-RE-hGX" firstAttribute="trailing" secondItem="f4G-Zi-fb9" secondAttribute="trailing" id="hrE-EZ-OkG"/>
-                            <constraint firstItem="f4G-Zi-fb9" firstAttribute="leading" secondItem="4kS-RE-hGX" secondAttribute="leading" id="sb3-H4-eXi"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4kS-RE-hGX"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dJy-zR-KZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1244" y="782.15892053973016"/>
         </scene>
     </scenes>
 </document>
