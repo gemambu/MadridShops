@@ -28,12 +28,46 @@ class MainViewController: UIViewController {
         self.view.addSubview(myLoader)
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        ExecuteOnceInteractorImpl().execute{
+            initializeData()
+        }
+    }
+    
+    func initializeData() {
+        //let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorFakeImpl()
+        
+        let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorNSURLSessionImpl()
+        
+        downloadEntitiesInteractor.execute{ (entities: Entities) in
+            // todo OK
+            print("Name: " + entities.get(index: 0).name)
+            
+            // save the entities in core data
+            let cacheInteractor = SaveAllEntitiesInteractorImpl()
+            cacheInteractor.execute(entities: entities, context: self.context, onSuccess: { (entities: Entities)
+                in
+                print("Entities downloaded and saved correctly!")
+                
+                SetExecutedOnceInteractorImpl().execute()
+                
+//                self._fetchedResultsController = nil
+//                self.entitiesCollectionView.delegate = self
+//                self.entitiesCollectionView.dataSource = self
+//                self.entitiesCollectionView.reloadData()
+            })
+        }
+    }
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEntitiesSegue" {
             let vc = segue.destination as! EntitiesViewController
             vc.context = self.context
+            vc.type = "Shop"
         }
     }
 }

@@ -99,7 +99,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="2Tm-VB-vwV" userLabel="EntityCell" customClass="ShopCell" customModule="MadridShops" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EntityCell" id="2Tm-VB-vwV" userLabel="EntityCell" customClass="EntityCell" customModule="MadridShops" customModuleProvider="target">
                                         <rect key="frame" x="18.5" y="0.0" width="338" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -183,34 +183,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pvv-o4-XxT">
-                                <rect key="frame" x="16" y="382" width="343" height="265"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-Wr-uMI" userLabel="description">
-                                <rect key="frame" x="16" y="97" width="343" height="277"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-Wr-uMI" userLabel="description">
+                                <rect key="frame" x="16" y="90" width="343" height="231"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z7Z-m5-5h8" userLabel="location">
+                                <rect key="frame" x="16" y="358" width="343" height="199"/>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yxw-EB-9zA" userLabel="address">
+                                <rect key="frame" x="16" y="580" width="343" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. </string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pvv-o4-XxT" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" constant="16" id="108-yN-rQI"/>
-                            <constraint firstItem="RP7-38-0c9" firstAttribute="trailing" secondItem="Pvv-o4-XxT" secondAttribute="trailing" constant="16" id="YoF-mm-erA"/>
-                            <constraint firstItem="Pvv-o4-XxT" firstAttribute="top" secondItem="MwH-Wr-uMI" secondAttribute="bottom" constant="8" id="a1w-PO-Qx7"/>
-                            <constraint firstItem="RP7-38-0c9" firstAttribute="bottom" secondItem="Pvv-o4-XxT" secondAttribute="bottom" constant="20" id="ghu-0u-b0Y"/>
-                            <constraint firstItem="MwH-Wr-uMI" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" constant="33" id="kfT-bF-O4y"/>
-                            <constraint firstItem="RP7-38-0c9" firstAttribute="trailing" secondItem="MwH-Wr-uMI" secondAttribute="trailing" constant="16" id="sLQ-ic-WC6"/>
-                            <constraint firstItem="Pvv-o4-XxT" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" constant="318" id="tU7-MP-SiO"/>
-                            <constraint firstItem="MwH-Wr-uMI" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" constant="16" id="veQ-cN-3ZA"/>
-                            <constraint firstItem="RP7-38-0c9" firstAttribute="bottom" secondItem="MwH-Wr-uMI" secondAttribute="bottom" constant="293" id="wTr-7S-sbp"/>
+                            <constraint firstItem="z7Z-m5-5h8" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" constant="16" id="9H2-Vn-8Ba"/>
+                            <constraint firstItem="yxw-EB-9zA" firstAttribute="top" secondItem="z7Z-m5-5h8" secondAttribute="bottom" constant="29" id="9Yy-JN-Gs9"/>
+                            <constraint firstItem="RP7-38-0c9" firstAttribute="trailing" secondItem="yxw-EB-9zA" secondAttribute="trailing" constant="16" id="Gaf-R0-S9d"/>
+                            <constraint firstItem="RP7-38-0c9" firstAttribute="bottom" secondItem="MwH-Wr-uMI" secondAttribute="bottom" constant="346" id="JEL-eT-PQp"/>
+                            <constraint firstItem="yxw-EB-9zA" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" constant="522" id="JUt-Gr-HX4"/>
+                            <constraint firstItem="z7Z-m5-5h8" firstAttribute="centerX" secondItem="RP7-38-0c9" secondAttribute="centerX" id="JXa-rL-xEf"/>
+                            <constraint firstItem="RP7-38-0c9" firstAttribute="bottom" secondItem="yxw-EB-9zA" secondAttribute="bottom" constant="13" id="LNR-mV-UTa"/>
+                            <constraint firstItem="RP7-38-0c9" firstAttribute="trailing" secondItem="z7Z-m5-5h8" secondAttribute="trailing" constant="16" id="Vbd-60-b6M"/>
+                            <constraint firstItem="yxw-EB-9zA" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" constant="16" id="buF-19-rzg"/>
+                            <constraint firstItem="MwH-Wr-uMI" firstAttribute="width" secondItem="z7Z-m5-5h8" secondAttribute="width" id="eND-cQ-4t0"/>
+                            <constraint firstItem="RP7-38-0c9" firstAttribute="trailing" secondItem="MwH-Wr-uMI" secondAttribute="trailing" constant="16" id="ghF-KV-rAg"/>
+                            <constraint firstItem="RP7-38-0c9" firstAttribute="bottom" secondItem="z7Z-m5-5h8" secondAttribute="bottom" constant="110" id="j9R-w6-rYl"/>
+                            <constraint firstItem="MwH-Wr-uMI" firstAttribute="centerX" secondItem="RP7-38-0c9" secondAttribute="centerX" id="naP-3w-NIT"/>
+                            <constraint firstItem="MwH-Wr-uMI" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" constant="16" id="ndm-RV-G2S"/>
+                            <constraint firstItem="yxw-EB-9zA" firstAttribute="width" secondItem="z7Z-m5-5h8" secondAttribute="width" id="ngM-by-TX2"/>
+                            <constraint firstItem="z7Z-m5-5h8" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" constant="294" id="olO-Wu-xLv"/>
+                            <constraint firstItem="yxw-EB-9zA" firstAttribute="centerX" secondItem="RP7-38-0c9" secondAttribute="centerX" id="pyz-8k-yEW"/>
+                            <constraint firstItem="MwH-Wr-uMI" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" constant="26" id="qLM-Eq-k8E"/>
+                            <constraint firstItem="z7Z-m5-5h8" firstAttribute="top" secondItem="MwH-Wr-uMI" secondAttribute="bottom" constant="37" id="x1x-0f-yr2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RP7-38-0c9"/>
                     </view>
                     <connections>
+                        <outlet property="addressView" destination="yxw-EB-9zA" id="Oed-Y9-d6y"/>
                         <outlet property="descriptionView" destination="MwH-Wr-uMI" id="zAT-gN-1SO"/>
-                        <outlet property="imageView" destination="Pvv-o4-XxT" id="tri-vH-lOI"/>
+                        <outlet property="location" destination="z7Z-m5-5h8" id="feK-m0-Uqv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5h-eb-cZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

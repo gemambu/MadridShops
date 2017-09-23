@@ -7,10 +7,30 @@ class DownloadAllEntitiesInteractorNSURLSessionImpl : DownloadAllEntitiesInterac
         let urlStringShops = "https://madrid-shops.com/json_new/getShops.php"
         let urlStringActivities = "http://madrid-shops.com/json_new/getActivities.php"
         
+        if let url = URL(string: urlStringShops) {
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
+                
+                OperationQueue.main.addOperation {
+                    assert(Thread.current == Thread.main)
+                    if error == nil {
+                        // OK
+                        let entities = parseEntities(data: data!, type: "Shop")
+                        onSuccess(entities)
+                    } else {
+                        // Error
+                        if let myError = onError {
+                            myError(error!)
+                        }
+                    }
+                }
+            }
+            task.resume()
+        }
         
-        downloadEntities(urlString: urlStringShops, type: "Shop", onSuccess: onSuccess, onError: onError)
-        downloadEntities(urlString: urlStringActivities, type: "Activity", onSuccess: onSuccess, onError: onError)
-        
+      //  downloadEntities(urlString: urlStringActivities, type: "Activity", onSuccess: onSuccess, onError: onError)
+      //  downloadEntities(urlString: urlStringShops, type: "Shop", onSuccess: onSuccess, onError: onError)
+
     }
     
     func downloadEntities(urlString: String, type: String, onSuccess: @escaping successClosure, onError: errorClosure) {

@@ -1,10 +1,12 @@
 import UIKit
+import MapKit
+import CoreLocation
 
 class EntityDetailViewController: UIViewController {
 
     @IBOutlet weak var descriptionView: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var location: MKMapView!
+    @IBOutlet weak var addressView: UITextView!
     var entity: Entity?
     
     
@@ -12,7 +14,10 @@ class EntityDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = self.entity?.name
         self.descriptionView.text = self.entity?.description
-        self.entity?.image.loadImage(into: imageView)
+        self.addressView.text = self.entity?.address
+        
+        let entityLocation = CLLocation(latitude: Double((self.entity?.latitude)!) , longitude: Double((self.entity?.longitude)!))
+        self.location.setCenter(entityLocation.coordinate, animated: true)
         
     }
     

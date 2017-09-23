@@ -7,6 +7,7 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var entitiesCollectionView: UICollectionView!
     var context: NSManagedObjectContext!
+    var type: String!
     
     @IBOutlet weak var map: MKMapView!
     let locationManager = CLLocationManager()
@@ -18,9 +19,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        ExecuteOnceInteractorImpl().execute{
-            initializeData()
-        }
     
         self.entitiesCollectionView.delegate = self
         self.entitiesCollectionView.dataSource = self
@@ -30,29 +28,7 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func initializeData() {
-        let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorNSURLSessionImpl()
-        
-        downloadEntitiesInteractor.execute{ (entities: Entities) in
-            // todo OK
-            print("Name: " + entities.get(index: 0).name)
-            
-            // save the entities in core data
-            let cacheInteractor = SaveAllEntitiesInteractorImpl()
-            cacheInteractor.execute(entities: entities, context: self.context, onSuccess: { (entities: Entities)
-                in
-                print("Entities downloaded and saved correctly!")
-                
-                SetExecutedOnceInteractorImpl().execute()
-                
-                self._fetchedResultsController = nil
-                self.entitiesCollectionView.delegate = self
-                self.entitiesCollectionView.dataSource = self
-                self.entitiesCollectionView.reloadData()
-            })
-        }
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let entityCD = self.fetchedResultsController.object(at: indexPath)
         self.performSegue(withIdentifier: "ShowEntityDetailSegue", sender: entityCD)
@@ -84,8 +60,12 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
         // Edit the sort key as appropriate.
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
+        // filter by the entity type
+        fetchRequest.predicate = NSPredicate(format: "type == %@", self.type)
+        
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
+        
         // fetchedRequest == SELECT * FROM EVENT PRDER BY TIMESTAMP DESC
         _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "EntitiesChacheFile")
         //aFetchedResultsController.delegate = self
