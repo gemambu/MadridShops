@@ -54,7 +54,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let entityCD = self.fetchedResultsController.object(at: indexPath)
         self.performSegue(withIdentifier: "ShowEntityDetailSegue", sender: entityCD)
     }
