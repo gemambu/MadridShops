@@ -35,28 +35,33 @@
         <scene sceneID="Jab-aC-yhB">
             <objects>
                 <viewController id="DSJ-WF-nFX" customClass="MainViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Gm-bJ-KPv">
+                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="8Gm-bJ-KPv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-aC-Jyu" userLabel="Activities">
+                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-aC-Jyu" userLabel="Activities">
                                 <rect key="frame" x="61" y="436" width="280" height="58"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Activities">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="ndP-YI-6s5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
                                 <rect key="frame" x="61" y="188" width="253" height="58"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Shops">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="ihv-ex-rJN"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NI0-aC-Jyu" firstAttribute="height" secondItem="yUe-Mc-56G" secondAttribute="height" id="2se-eV-0lq"/>
                             <constraint firstItem="yUe-Mc-56G" firstAttribute="leading" secondItem="3Kt-8x-Q5e" secondAttribute="leading" constant="61" id="NWC-To-cfk"/>
@@ -69,13 +74,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Kt-8x-Q5e"/>
                     </view>
-                    <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="CCW-f3-UcB">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowEntitiesSegue" id="qMA-EQ-6vd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhQ-Ta-PtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,4 +236,7 @@
             <point key="canvasLocation" x="1229.5999999999999" y="89.505247376311857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ihv-ex-rJN"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -2,7 +2,6 @@
 import Foundation
 
 
-
 class DownloadAllEntitiesInteractorNSURLSessionImpl : DownloadAllEntitiesInteractor {
     
     var entities: Entities?
@@ -20,7 +19,12 @@ class DownloadAllEntitiesInteractorNSURLSessionImpl : DownloadAllEntitiesInterac
                 OperationQueue.main.addOperation {
                     assert(Thread.current == Thread.main)
                     if error == nil {
-                        self.entities = parseEntities(data: data!, type: type)
+                        
+                        self.initEntities()
+                        
+                        let localEntities = parseEntities(data: data!, type: type)
+                        
+                        self.entities?.addAll(entities: localEntities.getAll())
                         if finish {
                             onSuccess(self.entities!)
                             return
@@ -42,6 +46,12 @@ class DownloadAllEntitiesInteractorNSURLSessionImpl : DownloadAllEntitiesInterac
     
     func execute(onSuccess: @escaping successClosure) {
         execute(onSuccess: onSuccess, onError: nil)
+    }
+    
+    func initEntities(){
+        if self.entities == nil {
+            self.entities = Entities.init()
+        }
     }
     
     

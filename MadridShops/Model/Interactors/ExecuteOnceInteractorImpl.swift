@@ -7,6 +7,8 @@ class ExecuteOnceInteractorImpl : ExecuteOnceInteractor {
         if defaults.string(forKey: "once") == nil {
             // first time here
             closure()
+        } else {
+            print("💾 Entities already saved on database")
         }
     }
 }

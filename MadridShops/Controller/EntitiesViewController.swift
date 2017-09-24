@@ -26,6 +26,8 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
         let madridLocation = CLLocation(latitude:40.41889 , longitude: -3.69194)
         self.map.setCenter(madridLocation.coordinate, animated: true)
         
+        self.title = self.type
+        
     }
     
 
@@ -39,7 +41,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
             let vc = segue.destination as! EntityDetailViewController
             let entityCD: EntityCD =  sender as! EntityCD
             vc.entity = mapEntityCDIntoEntity(entityCD: entityCD)
-            
         }
     }
     

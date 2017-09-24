@@ -23,6 +23,7 @@ class DownloadAllEntitiesInteractorNSOpImpl: DownloadAllEntitiesInteractor {
     }
     
     func downloadAndParseEntities(urlString: String, type: String, onSuccess: @escaping (Entities) -> Void){
+        
         if let url = URL(string: urlString), let data = NSData(contentsOf: url) as Data? {
             
             let entities = parseEntities(data: data, type: type)
