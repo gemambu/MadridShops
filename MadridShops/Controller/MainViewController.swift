@@ -38,7 +38,6 @@ class MainViewController: UIViewController {
     }
     
     func initializeData() {
-        //let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorFakeImpl()
         
         let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorNSURLSessionImpl()
         
@@ -54,10 +53,6 @@ class MainViewController: UIViewController {
                 
                 SetExecutedOnceInteractorImpl().execute()
                 
-//                self._fetchedResultsController = nil
-//                self.entitiesCollectionView.delegate = self
-//                self.entitiesCollectionView.dataSource = self
-//                self.entitiesCollectionView.reloadData()
             })
         }
     }
@@ -67,7 +62,7 @@ class MainViewController: UIViewController {
         if segue.identifier == "ShowEntitiesSegue" {
             let vc = segue.destination as! EntitiesViewController
             vc.context = self.context
-            vc.type = "Shop"
+            vc.type = "Activity"
         }
     }
 }
