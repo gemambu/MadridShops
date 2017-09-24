@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class EntityDetailViewController: UIViewController {
+class EntityDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var location: MKMapView!
@@ -17,6 +17,9 @@ class EntityDetailViewController: UIViewController {
         self.addressView.text = self.entity?.address
         
         let entityLocation = CLLocation(latitude: Double((self.entity?.latitude)!) , longitude: Double((self.entity?.longitude)!))
+        let span = MKCoordinateSpanMake(0.003, 0.003)
+        let region = MKCoordinateRegion(center: entityLocation.coordinate, span: span)
+        self.location.setRegion(region, animated: true)
         self.location.setCenter(entityLocation.coordinate, animated: true)
         
     }

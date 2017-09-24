@@ -3,7 +3,7 @@ import CoreData
 import CoreLocation
 import MapKit
 
-class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
+class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var entitiesCollectionView: UICollectionView!
     var context: NSManagedObjectContext!
@@ -19,14 +19,22 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
+        self.map.delegate = self
+        
     
         self.entitiesCollectionView.delegate = self
         self.entitiesCollectionView.dataSource = self
         
         let madridLocation = CLLocation(latitude:40.41889 , longitude: -3.69194)
+        
+        let span = MKCoordinateSpanMake(0.5, 0.5)
+        let region = MKCoordinateRegion(center: madridLocation.coordinate, span: span)
+        self.map.setRegion(region, animated: true)
         self.map.setCenter(madridLocation.coordinate, animated: true)
         
         self.title = self.type
+        
+
         
     }
     
@@ -69,7 +77,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate {
         
         // fetchedRequest == SELECT * FROM EVENT PRDER BY TIMESTAMP DESC
         _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "EntitiesChacheFile")
-        //aFetchedResultsController.delegate = self
         
         do {
             try _fetchedResultsController!.performFetch()

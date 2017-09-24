@@ -16,8 +16,9 @@ func parseEntities(data: Data, type: String) -> Entities {
             entity.logo = entityJson["logo_img"] as! String
             entity.openingHours = entityJson["opening_hours_en"] as! String
             entity.type = type
-            entity.latitude = entityJson["gps_lat"] != nil ? entityJson["gps_lat"] as? Float : 0.0
-            entity.longitude = entityJson["gps_lon"] != nil ? entityJson["gps_lon"] as? Float : 0.0
+            
+            entity.longitude = convertToFloat(entityField:(entityJson["gps_lon"]! as! String))
+            entity.latitude = convertToFloat(entityField:(entityJson["gps_lat"]! as! String))
             
             entities.add(entity: entity)
         }
@@ -27,4 +28,9 @@ func parseEntities(data: Data, type: String) -> Entities {
     
     return entities
     
+}
+
+func convertToFloat(entityField: String) -> Float {
+    return Float(entityField
+        .replacingOccurrences(of: " ", with: ""))!
 }
