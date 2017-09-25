@@ -4,10 +4,11 @@ import CoreLocation
 import MapKit
 
 class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
+    
     @IBOutlet weak var entitiesCollectionView: UICollectionView!
     var context: NSManagedObjectContext!
     var type: String!
+    var pin: String!
     
     @IBOutlet weak var map: MKMapView!
     let locationManager = CLLocationManager()
@@ -21,24 +22,28 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         self.map.delegate = self
         
-    
+        
         self.entitiesCollectionView.delegate = self
         self.entitiesCollectionView.dataSource = self
         
+        loadPins()
+        
         let madridLocation = CLLocation(latitude:40.41889 , longitude: -3.69194)
         
-        let span = MKCoordinateSpanMake(0.5, 0.5)
-        let region = MKCoordinateRegion(center: madridLocation.coordinate, span: span)
+        let region = MKCoordinateRegion(center: madridLocation.coordinate, span: MKCoordinateSpanMake(0.2, 0.2))
+        
         self.map.setRegion(region, animated: true)
         self.map.setCenter(madridLocation.coordinate, animated: true)
         
         self.title = self.type
         
-
+        self.pin = self.type == entityType[0] ? pinType[0] : pinType[1]
         
+        
+
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let entityCD = self.fetchedResultsController.object(at: indexPath)
         self.performSegue(withIdentifier: "ShowEntityDetailSegue", sender: entityCD)
@@ -90,11 +95,47 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         return _fetchedResultsController!
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        self.map.setCenter(location.coordinate, animated: true)
+    // MARK: - Map View
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKPinAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        let annotationId = "AnnotationId"
+        var annotationView: MKPinAnnotationView?
+        
+        if let dequeueAnnotaitonView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationId) {
+            annotationView = dequeueAnnotaitonView as! MKPinAnnotationView
+            annotationView?.annotation = annotation
+        } else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationId) as! MKPinAnnotationView
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            annotationView.canShowCallout = true
+            self.pin = self.type == entityType[0] ? pinType[0] : pinType[1]
+            annotationView.image = UIImage(named: self.pin)
+        }
+        
+        return annotationView
+        
+        
     }
 
+   
+    
+    func loadPins() {
+        for entity in self.fetchedResultsController.fetchedObjects! {
+            let entityLocation = CLLocation(latitude: Double(entity.latitude) , longitude: Double(entity.longitude))
+            let entityPin = MapPin(coordinate: entityLocation.coordinate , title: entity.name!, subtitle: "")
 
+            self.map.addAnnotation(entityPin)
+        }
+        
+       
+    }
+    
 }
 

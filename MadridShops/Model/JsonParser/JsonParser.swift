@@ -32,5 +32,6 @@ func parseEntities(data: Data, type: String) -> Entities {
 
 func convertToFloat(entityField: String) -> Float {
     return Float(entityField
-        .replacingOccurrences(of: " ", with: ""))!
+        .trimmingCharacters(in: .whitespaces)
+        .replacingOccurrences(of: ",", with: ""))!
 }
