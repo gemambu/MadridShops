@@ -36,10 +36,17 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if (!self.viewHasBeenSet) {
-            ExecuteOnceInteractorImpl().execute{
-                initializeData()
+   
+            if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
+                // no connection and no core data info
+                print("show chiquito view")
+            } else {
+                ExecuteOnceInteractorImpl().execute{
+                    initializeData()
+                }
+                self.viewHasBeenSet = true
             }
-            self.viewHasBeenSet = true
+            
         }
     }
     

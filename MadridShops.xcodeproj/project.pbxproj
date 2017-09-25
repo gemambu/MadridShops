@@ -30,6 +30,7 @@
 		B69B66141F6D20FB004F8511 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66131F6D20FB004F8511 /* String+Image.swift */; };
 		B69B66491F6D84C6004F8511 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69B66481F6D84C6004F8511 /* CoreData.framework */; };
 		B69B664C1F6D8509004F8511 /* MadridShops.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B69B664A1F6D8509004F8511 /* MadridShops.xcdatamodeld */; };
+		B6A450C31F795329002B5186 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A450C21F795329002B5186 /* Reachability.swift */; };
 		B6A859511F70538A009ECD3A /* MapEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859501F70538A009ECD3A /* MapEntities.swift */; };
 		B6A859531F70614D009ECD3A /* ExecuteOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859521F70614D009ECD3A /* ExecuteOnceInteractor.swift */; };
 		B6A859551F7061EB009ECD3A /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859541F7061EB009ECD3A /* SetExecutedOnceInteractor.swift */; };
@@ -88,6 +89,7 @@
 		B69B66131F6D20FB004F8511 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		B69B66481F6D84C6004F8511 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B69B664B1F6D8509004F8511 /* MadridShops.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MadridShops.xcdatamodel; sourceTree = "<group>"; };
+		B6A450C21F795329002B5186 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B6A859501F70538A009ECD3A /* MapEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEntities.swift; sourceTree = "<group>"; };
 		B6A859521F70614D009ECD3A /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
 		B6A859541F7061EB009ECD3A /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				B69B66131F6D20FB004F8511 /* String+Image.swift */,
 				B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */,
 				B6476D621F77B35F00C82974 /* Resources.swift */,
+				B6A450C21F795329002B5186 /* Reachability.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				B6B264E81F6B0D790031EBD0 /* JsonParser.swift in Sources */,
 				B6B3CB571F6D94C900E10694 /* SaveAllEntitiesInteractor.swift in Sources */,
 				B60EF6531F61D006000BCB96 /* EntitiesViewController.swift in Sources */,
+				B6A450C31F795329002B5186 /* Reachability.swift in Sources */,
 				B6A859531F70614D009ECD3A /* ExecuteOnceInteractor.swift in Sources */,
 				B60EF6511F61D006000BCB96 /* AppDelegate.swift in Sources */,
 				B6476D631F77B35F00C82974 /* Resources.swift in Sources */,

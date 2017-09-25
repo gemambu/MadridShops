@@ -19,6 +19,7 @@ class EntityDetailViewController: UIViewController, CLLocationManagerDelegate, M
         let entityLocation = CLLocation(latitude: Double((self.entity?.latitude)!) , longitude: Double((self.entity?.longitude)!))
         let span = MKCoordinateSpanMake(0.002, 0.002)
         let region = MKCoordinateRegion(center: entityLocation.coordinate, span: span)
+        
         self.location.setRegion(region, animated: true)
         self.location.setCenter(entityLocation.coordinate, animated: true)
 
