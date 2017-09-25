@@ -105,43 +105,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="338" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ntr-eA-A1x" userLabel="imageShop">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ntr-eA-A1x" userLabel="logo">
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
                                                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMx-LX-VVT" userLabel="name">
-                                                    <rect key="frame" x="83" y="5" width="247" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="83" y="14" width="247" height="23"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <color key="textColor" red="0.97117045977655025" green="0.98078600888324874" blue="0.98078600888324874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRu-5s-mby" userLabel="openingHours">
-                                                    <rect key="frame" x="82.5" y="24" width="247" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-U4-Keq" userLabel="backgroundImage">
+                                                    <rect key="frame" x="0.0" y="0.0" width="338" height="50"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="ntr-eA-A1x" firstAttribute="leading" secondItem="2Tm-VB-vwV" secondAttribute="leading" id="0bC-5p-dKb"/>
                                             <constraint firstItem="WMx-LX-VVT" firstAttribute="leading" secondItem="ntr-eA-A1x" secondAttribute="trailing" constant="8" id="2Tj-QI-k6Y"/>
+                                            <constraint firstItem="9fb-U4-Keq" firstAttribute="leading" secondItem="2Tm-VB-vwV" secondAttribute="leading" id="7oH-GW-wbg"/>
+                                            <constraint firstItem="9fb-U4-Keq" firstAttribute="width" secondItem="2Tm-VB-vwV" secondAttribute="width" id="8OO-T8-Jjn"/>
+                                            <constraint firstItem="9fb-U4-Keq" firstAttribute="centerY" secondItem="2Tm-VB-vwV" secondAttribute="centerY" id="Dcv-PM-2UF"/>
                                             <constraint firstItem="WMx-LX-VVT" firstAttribute="leading" secondItem="2Tm-VB-vwV" secondAttribute="leading" constant="83" id="EYL-rw-LF5"/>
-                                            <constraint firstItem="yRu-5s-mby" firstAttribute="leading" secondItem="2Tm-VB-vwV" secondAttribute="leading" constant="82.5" id="H3d-2V-UU6"/>
+                                            <constraint firstAttribute="trailing" secondItem="9fb-U4-Keq" secondAttribute="trailing" id="Gab-tT-D60"/>
+                                            <constraint firstItem="9fb-U4-Keq" firstAttribute="top" secondItem="2Tm-VB-vwV" secondAttribute="top" id="HZy-A2-mTH"/>
                                             <constraint firstAttribute="trailing" secondItem="ntr-eA-A1x" secondAttribute="trailing" constant="263" id="Sid-wb-PEm"/>
-                                            <constraint firstItem="WMx-LX-VVT" firstAttribute="top" secondItem="2Tm-VB-vwV" secondAttribute="top" constant="5" id="cMa-TN-JWX"/>
-                                            <constraint firstAttribute="bottom" secondItem="WMx-LX-VVT" secondAttribute="bottom" constant="24" id="db9-Gw-J8Q"/>
+                                            <constraint firstItem="9fb-U4-Keq" firstAttribute="height" secondItem="2Tm-VB-vwV" secondAttribute="height" id="aDG-dA-O6t"/>
+                                            <constraint firstItem="WMx-LX-VVT" firstAttribute="centerY" secondItem="2Tm-VB-vwV" secondAttribute="centerY" id="dcF-1b-I1E"/>
                                             <constraint firstItem="ntr-eA-A1x" firstAttribute="top" secondItem="2Tm-VB-vwV" secondAttribute="top" id="ghu-1C-wyv"/>
-                                            <constraint firstItem="yRu-5s-mby" firstAttribute="top" secondItem="2Tm-VB-vwV" secondAttribute="top" constant="24" id="huM-IL-ft8"/>
                                             <constraint firstAttribute="trailing" secondItem="WMx-LX-VVT" secondAttribute="trailing" constant="8" id="lb5-aP-0Rj"/>
-                                            <constraint firstAttribute="bottom" secondItem="yRu-5s-mby" secondAttribute="bottom" constant="5" id="lvA-gC-JwW"/>
+                                            <constraint firstAttribute="bottom" secondItem="9fb-U4-Keq" secondAttribute="bottom" id="mts-Kv-4ty"/>
+                                            <constraint firstItem="9fb-U4-Keq" firstAttribute="centerX" secondItem="2Tm-VB-vwV" secondAttribute="centerX" id="n8A-0j-bgW"/>
                                             <constraint firstAttribute="bottom" secondItem="ntr-eA-A1x" secondAttribute="bottom" id="o9n-jc-q1G"/>
-                                            <constraint firstAttribute="trailing" secondItem="yRu-5s-mby" secondAttribute="trailing" constant="8.5" id="zCg-kY-vwf"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="backgroundImage" destination="9fb-U4-Keq" id="DWp-4p-gBI"/>
                                             <outlet property="imageView" destination="ntr-eA-A1x" id="a4M-4e-3P3"/>
                                             <outlet property="label" destination="WMx-LX-VVT" id="2dV-FW-1MM"/>
-                                            <outlet property="openingHours" destination="yRu-5s-mby" id="SuX-J0-lpw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="84"/>
+            <point key="canvasLocation" x="456.80000000000001" y="83.208395802098963"/>
         </scene>
         <!--Entity Detail View Controller-->
         <scene sceneID="QLP-Bh-Y6C">
