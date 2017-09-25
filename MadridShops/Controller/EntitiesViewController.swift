@@ -52,9 +52,18 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEntityDetailSegue" {
             let vc = segue.destination as! EntityDetailViewController
-            let entityCD: EntityCD =  sender as! EntityCD
-            vc.entity = mapEntityCDIntoEntity(entityCD: entityCD)
+            var entityCD : EntityCD? = nil
+            if sender is EntityCD {
+                entityCD =  sender as! EntityCD
+            } else if sender is MapPin {
+                let entity = (sender as! MapPin).entity
+                entityCD = mapEntityIntoEntityCD(context: self.context, entity: entity!)
+            }
+            
+            vc.entity = mapEntityCDIntoEntity(entityCD: entityCD!)
         }
+        
+
     }
     
     // MARK: - Fetched results controller
@@ -96,40 +105,41 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
     }
     
     // MARK: - Map View
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? MapPin {
+            let identifier = "AnnotationIdentifier"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+                as? MKPinAnnotationView { // 2
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            }
+            
+            //view.pinTintColor = annotation.pinTintColor()
+            return view
+        }
+        return nil
+    }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKPinAnnotationView? {
-        guard !(annotation is MKUserLocation) else {
-            return nil
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            print(view.annotation?.title!)
+            performSegue(withIdentifier: "ShowEntityDetailSegue", sender: view.annotation as! MapPin)
         }
-        
-        let annotationId = "AnnotationId"
-        var annotationView: MKPinAnnotationView?
-        
-        if let dequeueAnnotaitonView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationId) {
-            annotationView = dequeueAnnotaitonView as! MKPinAnnotationView
-            annotationView?.annotation = annotation
-        } else {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationId) as! MKPinAnnotationView
-            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        }
-        
-        if let annotationView = annotationView {
-            annotationView.canShowCallout = true
-            self.pin = self.type == entityType[0] ? pinType[0] : pinType[1]
-            annotationView.image = UIImage(named: self.pin)
-        }
-        
-        return annotationView
-        
         
     }
-
-   
     
     func loadPins() {
         for entity in self.fetchedResultsController.fetchedObjects! {
             let entityLocation = CLLocation(latitude: Double(entity.latitude) , longitude: Double(entity.longitude))
-            let entityPin = MapPin(coordinate: entityLocation.coordinate , title: entity.name!, subtitle: "")
+            let entityPin = MapPin(coordinate: entityLocation.coordinate , title: entity.name!, subtitle: "", entity: mapEntityCDIntoEntity(entityCD: entity))
 
             self.map.addAnnotation(entityPin)
         }
