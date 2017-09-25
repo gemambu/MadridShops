@@ -36,10 +36,10 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if (!self.viewHasBeenSet) {
-   
             if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
                 // no connection and no core data info
                 print("show chiquito view")
+                self.performSegue(withIdentifier: "WarningViewSegue", sender: self)
             } else {
                 ExecuteOnceInteractorImpl().execute{
                     initializeData()
@@ -73,12 +73,15 @@ class MainViewController: UIViewController {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! EntitiesViewController
-        vc.context = self.context
-        if segue.identifier == "ShowShopsSegue" {
-            vc.type = entityType[0]
-        } else if segue.identifier == "ShowActivitiesSegue" {
-            vc.type = entityType[1]
+        if segue.destination is EntitiesViewController {
+            let vc = segue.destination as! EntitiesViewController
+            vc.context = self.context
+            if segue.identifier == "ShowShopsSegue" {
+                vc.type = entityType[0]
+            } else if segue.identifier == "ShowActivitiesSegue" {
+                vc.type = entityType[1]
+            }
         }
+        
     }
 }

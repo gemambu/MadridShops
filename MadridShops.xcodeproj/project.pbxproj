@@ -31,6 +31,7 @@
 		B69B66491F6D84C6004F8511 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69B66481F6D84C6004F8511 /* CoreData.framework */; };
 		B69B664C1F6D8509004F8511 /* MadridShops.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B69B664A1F6D8509004F8511 /* MadridShops.xcdatamodeld */; };
 		B6A450C31F795329002B5186 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A450C21F795329002B5186 /* Reachability.swift */; };
+		B6A450C51F796402002B5186 /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A450C41F796402002B5186 /* WarningViewController.swift */; };
 		B6A859511F70538A009ECD3A /* MapEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859501F70538A009ECD3A /* MapEntities.swift */; };
 		B6A859531F70614D009ECD3A /* ExecuteOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859521F70614D009ECD3A /* ExecuteOnceInteractor.swift */; };
 		B6A859551F7061EB009ECD3A /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859541F7061EB009ECD3A /* SetExecutedOnceInteractor.swift */; };
@@ -90,6 +91,7 @@
 		B69B66481F6D84C6004F8511 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B69B664B1F6D8509004F8511 /* MadridShops.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MadridShops.xcdatamodel; sourceTree = "<group>"; };
 		B6A450C21F795329002B5186 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B6A450C41F796402002B5186 /* WarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningViewController.swift; sourceTree = "<group>"; };
 		B6A859501F70538A009ECD3A /* MapEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEntities.swift; sourceTree = "<group>"; };
 		B6A859521F70614D009ECD3A /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
 		B6A859541F7061EB009ECD3A /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B6B3CB561F6D94C900E10694 /* SaveAllEntitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllEntitiesInteractor.swift; sourceTree = "<group>"; };
 		B6B3CB581F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllEntitiesInteractorImpl.swift; sourceTree = "<group>"; };
+		B6EC4B011F796A2E00EBA0EF /* chiquito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chiquito.gif; path = ../../../../../../Downloads/chiquito.gif; sourceTree = "<group>"; };
 		E251F2ABD29E6D75CD9BC033 /* Pods-MadridShops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShops.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +186,7 @@
 				B60EF6521F61D006000BCB96 /* EntitiesViewController.swift */,
 				B69B66101F6C4F02004F8511 /* EntityDetailViewController.swift */,
 				B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */,
+				B6A450C41F796402002B5186 /* WarningViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +248,7 @@
 		B60EF68A1F64549E000BCB96 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B6EC4B011F796A2E00EBA0EF /* chiquito.gif */,
 				B6A8595D1F745038009ECD3A /* events_pin.png */,
 				B6A8595C1F745038009ECD3A /* shops_pin.png */,
 				B60EF6571F61D006000BCB96 /* Assets.xcassets */,
@@ -451,10 +456,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FillableLoaders/FillableLoaders.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FillableLoaders.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -502,10 +509,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FillableLoaders/FillableLoaders.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FillableLoaders.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -528,6 +537,7 @@
 				B60EF6531F61D006000BCB96 /* EntitiesViewController.swift in Sources */,
 				B6A450C31F795329002B5186 /* Reachability.swift in Sources */,
 				B6A859531F70614D009ECD3A /* ExecuteOnceInteractor.swift in Sources */,
+				B6A450C51F796402002B5186 /* WarningViewController.swift in Sources */,
 				B60EF6511F61D006000BCB96 /* AppDelegate.swift in Sources */,
 				B6476D631F77B35F00C82974 /* Resources.swift in Sources */,
 				B6B3CB591F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift in Sources */,
