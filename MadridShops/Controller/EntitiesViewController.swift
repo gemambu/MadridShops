@@ -120,6 +120,12 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+                
+                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.height, height: view.frame.height))
+                annotation.entity?.logo.loadImage(into: imageView)
+                imageView.contentMode = .scaleAspectFit
+                view.leftCalloutAccessoryView = imageView
+            
             }
             
             //view.pinTintColor = annotation.pinTintColor()
