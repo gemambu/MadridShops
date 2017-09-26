@@ -1,7 +1,7 @@
 import Foundation
 
 class ExecuteOnceInteractorImpl : ExecuteOnceInteractor {
-    func execute (closure: () -> Void){
+    func execute (closure: () -> Void, onSuccess: ()->Void){
         let defaults = UserDefaults.standard
         
         if defaults.string(forKey: "once") == nil {
@@ -9,6 +9,7 @@ class ExecuteOnceInteractorImpl : ExecuteOnceInteractor {
             closure()
         } else {
             print("💾 Entities already saved on database")
+            onSuccess()
         }
     }
 }

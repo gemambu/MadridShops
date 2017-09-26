@@ -125,7 +125,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
                 annotation.entity?.logo.loadImage(into: imageView)
                 imageView.contentMode = .scaleAspectFit
                 view.leftCalloutAccessoryView = imageView
-            
             }
             
             //view.pinTintColor = annotation.pinTintColor()

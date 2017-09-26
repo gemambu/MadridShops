@@ -61,6 +61,11 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="ihv-ex-rJN"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dwN-Bg-GY2" userLabel="activityIndicator">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="NI0-aC-Jyu" firstAttribute="height" secondItem="yUe-Mc-56G" secondAttribute="height" id="2se-eV-0lq"/>
@@ -76,6 +81,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="dwN-Bg-GY2" id="S9D-EW-0sa"/>
                         <segue destination="DUp-1D-Olj" kind="show" identifier="WarningViewSegue" id="dNd-6b-NH9"/>
                     </connections>
                 </viewController>
