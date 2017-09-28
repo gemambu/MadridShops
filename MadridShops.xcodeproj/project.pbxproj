@@ -98,8 +98,6 @@
 		B6A859561F72EAD8009ECD3A /* SetExecutedOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		B6A859581F72EAFE009ECD3A /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		B6A8595A1F744914009ECD3A /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
-		B6A8595C1F745038009ECD3A /* shops_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shops_pin.png; sourceTree = "<group>"; };
-		B6A8595D1F745038009ECD3A /* events_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = events_pin.png; sourceTree = "<group>"; };
 		B6A8595E1F758234009ECD3A /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		B6A859601F7582F3009ECD3A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B6B264E41F6B02BE0031EBD0 /* DownloadAllEntitiesInteractorNSOpImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllEntitiesInteractorNSOpImpl.swift; sourceTree = "<group>"; };
@@ -108,6 +106,7 @@
 		B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B6B3CB561F6D94C900E10694 /* SaveAllEntitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllEntitiesInteractor.swift; sourceTree = "<group>"; };
 		B6B3CB581F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllEntitiesInteractorImpl.swift; sourceTree = "<group>"; };
+		B6E24BBD1F7D775A006D8770 /* events_pin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = events_pin.jpg; sourceTree = "<group>"; };
 		B6EC4B011F796A2E00EBA0EF /* chiquito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chiquito.gif; path = ../../../../../../Downloads/chiquito.gif; sourceTree = "<group>"; };
 		E251F2ABD29E6D75CD9BC033 /* Pods-MadridShops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShops.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,9 +247,8 @@
 		B60EF68A1F64549E000BCB96 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B6E24BBD1F7D775A006D8770 /* events_pin.jpg */,
 				B6EC4B011F796A2E00EBA0EF /* chiquito.gif */,
-				B6A8595D1F745038009ECD3A /* events_pin.png */,
-				B6A8595C1F745038009ECD3A /* shops_pin.png */,
 				B60EF6571F61D006000BCB96 /* Assets.xcassets */,
 			);
 			path = Assets;

@@ -106,50 +106,75 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
     
     // MARK: - Map View
 
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? MapPin {
-            let identifier = "AnnotationIdentifier"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            let annotationIdentifier = "AnnotationIdentifier"
+            var annotationView: MKPinAnnotationView?
+            if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
                 as? MKPinAnnotationView { // 2
-                dequeuedView.annotation = annotation
-                view = dequeuedView
+                annotationView = dequeuedAnnotationView
+                annotationView?.annotation = annotation
             } else {
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            }
+
+             if let annotationView = annotationView {
                 // 3
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
-                
-                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.height, height: view.frame.height))
+                annotationView.canShowCallout = true
+                annotationView.calloutOffset = CGPoint(x: -5, y: 5)
+                annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+
+                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: annotationView.frame.height, height: annotationView.frame.height))
                 annotation.entity?.logo.loadImage(into: imageView)
                 imageView.contentMode = .scaleAspectFit
-                view.leftCalloutAccessoryView = imageView
+                annotationView.leftCalloutAccessoryView = imageView
+                
             }
-            
-            //view.pinTintColor = annotation.pinTintColor()
-            return view
+
+            return annotationView
         }
         return nil
     }
+
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
-            print(view.annotation?.title!)
+            print("🔍 Showing detail for: \(view.annotation?.title!)")
             performSegue(withIdentifier: "ShowEntityDetailSegue", sender: view.annotation as! MapPin)
         }
         
     }
     
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        
+        
+        image.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    
+
+    
     func loadPins() {
+        var entityList = [MapPin]()
         for entity in self.fetchedResultsController.fetchedObjects! {
             let entityLocation = CLLocation(latitude: Double(entity.latitude) , longitude: Double(entity.longitude))
             let entityPin = MapPin(coordinate: entityLocation.coordinate , title: entity.name!, subtitle: "", entity: mapEntityCDIntoEntity(entityCD: entity))
 
-            self.map.addAnnotation(entityPin)
+            entityList.append(entityPin)
         }
         
-       
+        self.map.addAnnotations(entityList)
+        
     }
     
 }

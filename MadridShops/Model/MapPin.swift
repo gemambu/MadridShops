@@ -9,9 +9,11 @@ class MapPin: NSObject, MKAnnotation {
     let entity: Entity?
     
     init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String, entity: Entity) {
+        
         self.coordinate = coordinate
         self.title = title
         self.subtitle = subtitle
         self.entity = entity
+        super.init()
     }
 }
