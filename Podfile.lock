@@ -1,18 +1,46 @@
 PODS:
   - FillableLoaders (1.3.0)
-  - HanekeSwift (0.10.1)
+  - libwebp (0.6.0):
+    - libwebp/core (= 0.6.0)
+    - libwebp/dec (= 0.6.0)
+    - libwebp/demux (= 0.6.0)
+    - libwebp/dsp (= 0.6.0)
+    - libwebp/enc (= 0.6.0)
+    - libwebp/mux (= 0.6.0)
+    - libwebp/utils (= 0.6.0)
+    - libwebp/webp (= 0.6.0)
+  - libwebp/core (0.6.0):
+    - libwebp/webp
+  - libwebp/dec (0.6.0):
+    - libwebp/core
+  - libwebp/demux (0.6.0):
+    - libwebp/core
+  - libwebp/dsp (0.6.0):
+    - libwebp/core
+  - libwebp/enc (0.6.0):
+    - libwebp/core
+  - libwebp/mux (0.6.0):
+    - libwebp/core
+  - libwebp/utils (0.6.0):
+    - libwebp/core
+  - libwebp/webp (0.6.0)
+  - SDWebImage/Core (4.1.0)
+  - SDWebImage/WebP (4.1.0):
+    - libwebp
+    - SDWebImage/Core
   - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
   - FillableLoaders (~> 1.3.0)
-  - HanekeSwift
+  - SDWebImage/WebP
   - SwiftGifOrigin (~> 1.6.1)
 
 SPEC CHECKSUMS:
   FillableLoaders: 4decb0c33ce84a7da0da7be6b0fb15a87cb9906b
-  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: a1e30100b5c7d459a7f0f33a27c727f2241b86c1
+PODFILE CHECKSUM: 1872a1eeddbecc83d27aa221317a8c7caa24463c
 
 COCOAPODS: 1.3.1

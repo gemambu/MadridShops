@@ -1,5 +1,6 @@
 import UIKit
 
+
 class EntityCell: UICollectionViewCell {
     
     var entity: Entity?
@@ -20,7 +21,10 @@ class EntityCell: UICollectionViewCell {
             self.imageView.layer.cornerRadius = 30
         }
         
+//        self.entity?.image.loadImage(into: backgroundImage)
+//        backgroundImage.hnk_setImageFromURL(self.entity?.image)
         self.entity?.image.loadImage(into: backgroundImage)
+        
         self.contentView.sendSubview(toBack: self.backgroundImage)
    
     }
