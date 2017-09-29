@@ -44,18 +44,17 @@
                                 <rect key="frame" x="61" y="436" width="280" height="58"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Activities">
+                                <state key="normal" title="mainview.ActivitiesButton">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="ndP-YI-6s5"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
                                 <rect key="frame" x="61" y="188" width="253" height="58"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Shops">
+                                <state key="normal" title="mainview.ShopsButton">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -272,18 +271,16 @@
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="F40-mb-qmD"/>
-                                        </constraints>
                                         <viewLayoutGuide key="safeArea" id="I6R-Sg-k3M"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qDD-AJ-4jX" firstAttribute="top" secondItem="MQP-6S-xdg" secondAttribute="topMargin" id="1MR-yp-EqG"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="qDD-AJ-4jX" secondAttribute="trailing" id="5dN-au-yrf"/>
                                     <constraint firstItem="qDD-AJ-4jX" firstAttribute="leading" secondItem="MQP-6S-xdg" secondAttribute="leadingMargin" id="Byh-s9-zcV"/>
                                     <constraint firstItem="qDD-AJ-4jX" firstAttribute="leading" secondItem="MQP-6S-xdg" secondAttribute="leadingMargin" id="HMw-bg-GpZ"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="qDD-AJ-4jX" secondAttribute="trailing" id="Jg5-aC-JAc"/>
+                                    <constraint firstItem="qDD-AJ-4jX" firstAttribute="height" secondItem="MQP-6S-xdg" secondAttribute="height" id="Pr5-j2-DXT"/>
+                                    <constraint firstItem="qDD-AJ-4jX" firstAttribute="width" secondItem="MQP-6S-xdg" secondAttribute="width" id="WxZ-VO-Nr0"/>
                                     <constraint firstItem="qDD-AJ-4jX" firstAttribute="top" secondItem="MQP-6S-xdg" secondAttribute="topMargin" id="cdQ-fe-Ee7"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="qDD-AJ-4jX" secondAttribute="bottom" id="etq-Yq-RdE"/>
                                     <constraint firstItem="qDD-AJ-4jX" firstAttribute="leading" secondItem="MQP-6S-xdg" secondAttribute="leadingMargin" id="kaN-KL-sqH"/>
@@ -296,15 +293,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MQP-6S-xdg" firstAttribute="centerY" secondItem="RP7-38-0c9" secondAttribute="centerY" id="73Y-39-yXK"/>
-                            <constraint firstItem="MQP-6S-xdg" firstAttribute="trailing" secondItem="RP7-38-0c9" secondAttribute="trailing" id="AIO-Wv-0qV"/>
-                            <constraint firstItem="qDD-AJ-4jX" firstAttribute="height" secondItem="RP7-38-0c9" secondAttribute="height" id="BdH-Ky-qgK"/>
-                            <constraint firstItem="MQP-6S-xdg" firstAttribute="bottom" secondItem="RP7-38-0c9" secondAttribute="bottom" id="CxB-6u-v9b"/>
-                            <constraint firstItem="qDD-AJ-4jX" firstAttribute="width" secondItem="RP7-38-0c9" secondAttribute="width" id="Qdz-uL-SLT"/>
-                            <constraint firstItem="qDD-AJ-4jX" firstAttribute="width" secondItem="qqd-0v-IPa" secondAttribute="width" id="Qfh-Jd-INo"/>
-                            <constraint firstItem="MQP-6S-xdg" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" id="g4Z-za-C2N"/>
-                            <constraint firstItem="MQP-6S-xdg" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" id="mzt-2t-hQM"/>
-                            <constraint firstItem="MQP-6S-xdg" firstAttribute="centerX" secondItem="RP7-38-0c9" secondAttribute="centerX" id="qS8-Ng-Xty"/>
+                            <constraint firstItem="MQP-6S-xdg" firstAttribute="trailing" secondItem="RP7-38-0c9" secondAttribute="trailing" id="0gs-ne-lYJ"/>
+                            <constraint firstItem="MQP-6S-xdg" firstAttribute="leading" secondItem="RP7-38-0c9" secondAttribute="leading" id="E5Z-tW-qAa"/>
+                            <constraint firstItem="MQP-6S-xdg" firstAttribute="bottom" secondItem="RP7-38-0c9" secondAttribute="bottom" id="HLn-yG-Xbm"/>
+                            <constraint firstItem="MQP-6S-xdg" firstAttribute="top" secondItem="RP7-38-0c9" secondAttribute="top" id="efp-R5-8oi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RP7-38-0c9"/>
                     </view>
