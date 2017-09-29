@@ -1,15 +1,14 @@
 
 import Foundation
 
+
 func parseEntities(data: Data, type: String) -> Entities {
     let entities = Entities()
     do {
         let jsonObject = try JSONSerialization.jsonObject(with: data, options:
             JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>
         let result = jsonObject["result"] as! [Dictionary<String, Any>]
-
-        let cache = Cache<JSON>(name: "MadridShops")
-        
+      
         
         for entityJson in result {
             let entity = Entity(name: entityJson["name"] as! String)
