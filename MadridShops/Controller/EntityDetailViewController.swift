@@ -7,14 +7,16 @@ class EntityDetailViewController: UIViewController, CLLocationManagerDelegate, M
     @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var location: MKMapView!
     @IBOutlet weak var addressView: UITextView!
-    var entity: Entity?
+    @IBOutlet weak var openingHoursView: UITextView!
     
+    var entity: Entity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = self.entity?.name
         self.descriptionView.text = self.entity?.getDescription(language: languageCode!)
+        self.openingHoursView.text = self.entity?.getOpeningHours(language: languageCode!)
         self.addressView.text = self.entity?.address
         
         let entityLocation = CLLocation(latitude: Double((self.entity?.latitude)!) , longitude: Double((self.entity?.longitude)!))

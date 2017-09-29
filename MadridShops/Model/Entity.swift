@@ -25,5 +25,9 @@ public class Entity {
     func getDescription(language: String) -> String {
         return ((language == "") || (language == "en")) ? self.description_en : self.description_es
     }
+    
+    func getOpeningHours(language: String) -> String {
+        return ((language == "") || (language == "en")) ? self.openingHours_en : self.openingHours_es
+    }
 }
 
