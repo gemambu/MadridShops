@@ -1,6 +1,8 @@
 
 import Foundation
 
+let languageCode = Locale.current.languageCode
+
 let urlEntities = [
     "https://madrid-shops.com/json_new/getShops.php",
     "https://madrid-shops.com/json_new/getActivities.php"]

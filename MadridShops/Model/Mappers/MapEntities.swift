@@ -4,8 +4,10 @@ import CoreData
 func mapEntityCDIntoEntity(entityCD: EntityCD) -> Entity {
     let entity = Entity(name: entityCD.name!)
     
-    entity.description = entityCD.desc ?? ""
-    entity.openingHours = entityCD.openingHours ?? ""
+    entity.description_en = entityCD.description_en ?? ""
+    entity.description_es = entityCD.description_es ?? ""
+    entity.openingHours_en = entityCD.openingHours_en ?? ""
+    entity.openingHours_es = entityCD.openingHours_es ?? ""
     entity.address = entityCD.address ?? ""
     entity.image = entityCD.image ?? ""
     entity.logo = entityCD.logo ?? ""
@@ -22,8 +24,10 @@ func mapEntityIntoEntityCD(context: NSManagedObjectContext, entity: Entity) -> E
     let entityCD = EntityCD(context: context)
     
     entityCD.name = entity.name
-    entityCD.desc = entity.description
-    entityCD.openingHours = entity.openingHours
+    entityCD.description_en = entity.description_en
+    entityCD.description_es = entity.description_es
+    entityCD.openingHours_en = entity.openingHours_en
+    entityCD.openingHours_es = entity.openingHours_es
     entityCD.address = entity.address
     entityCD.image = entity.image
     entityCD.logo = entity.logo

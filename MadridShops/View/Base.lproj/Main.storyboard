@@ -81,7 +81,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2"/>
                     <connections>
+                        <outlet property="activitiesButton" destination="NI0-aC-Jyu" id="fr1-GB-f95"/>
                         <outlet property="activityIndicatorView" destination="dwN-Bg-GY2" id="S9D-EW-0sa"/>
+                        <outlet property="shopsButton" destination="yUe-Mc-56G" id="bti-Ul-VT3"/>
                         <segue destination="DUp-1D-Olj" kind="show" identifier="WarningViewSegue" id="dNd-6b-NH9"/>
                     </connections>
                 </viewController>
@@ -192,6 +194,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPK-o7-Cip">
                                 <rect key="frame" x="0.0" y="64" width="375" height="303"/>
                             </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CZ6-62-6od" userLabel="activityIndicator">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -209,6 +216,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Entities" id="YeW-MR-rpE"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="CZ6-62-6od" id="VB2-T1-aao"/>
                         <outlet property="entitiesCollectionView" destination="G8d-NI-Fvx" id="aKe-MJ-VaO"/>
                         <outlet property="map" destination="IPK-o7-Cip" id="Ooz-kz-Vac"/>
                         <segue destination="lc9-lm-XFj" kind="show" identifier="ShowEntityDetailSegue" id="ank-jZ-co8"/>

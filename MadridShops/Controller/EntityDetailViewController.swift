@@ -12,8 +12,9 @@ class EntityDetailViewController: UIViewController, CLLocationManagerDelegate, M
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = self.entity?.name
-        self.descriptionView.text = self.entity?.description
+        self.descriptionView.text = self.entity?.getDescription(language: languageCode!)
         self.addressView.text = self.entity?.address
         
         let entityLocation = CLLocation(latitude: Double((self.entity?.latitude)!) , longitude: Double((self.entity?.longitude)!))

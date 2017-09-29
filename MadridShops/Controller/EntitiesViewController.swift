@@ -5,26 +5,33 @@ import MapKit
 
 class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var entitiesCollectionView: UICollectionView!
+    
     var context: NSManagedObjectContext!
     var type: String!
     var pin: String!
     
     @IBOutlet weak var map: MKMapView!
     let locationManager = CLLocationManager()
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = self.type
+        
+        self.map.delegate = self
+        
+        self.entitiesCollectionView.delegate = self
+        self.entitiesCollectionView.dataSource = self
         
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        self.map.delegate = self
-        
-        
-        self.entitiesCollectionView.delegate = self
-        self.entitiesCollectionView.dataSource = self
         
         loadPins()
         
@@ -35,10 +42,9 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         self.map.setRegion(region, animated: true)
         self.map.setCenter(madridLocation.coordinate, animated: true)
         
-        self.title = self.type
         
+        // OJO!!
         self.pin = self.type == entityType[0] ? pinType[0] : pinType[1]
-        
         
 
     }
@@ -136,6 +142,28 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         }
         return nil
     }
+    
+    func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        if (UIApplication.shared.isIgnoringInteractionEvents) {
+        print("Is ignoring " )
+        } else {
+        print("Is NOT ignoring ")
+        }
+        self.displayActivityView()
+        
+        self.view.addSubview(self.activityIndicator)
+
+        
+    }
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        self.hideActivityView()
+        
+         UIApplication.shared.endIgnoringInteractionEvents()
+    }
 
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -161,9 +189,7 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         return newImage!
     }
     
-    
 
-    
     func loadPins() {
         var entityList = [MapPin]()
         for entity in self.fetchedResultsController.fetchedObjects! {
@@ -175,6 +201,18 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         self.map.addAnnotations(entityList)
         
+    }
+    
+    // MARK: - Activity View
+    
+    func displayActivityView(){
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+    }
+    
+    func hideActivityView() {
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
     }
     
 }

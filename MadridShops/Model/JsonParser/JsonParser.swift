@@ -13,10 +13,12 @@ func parseEntities(data: Data, type: String) -> Entities {
         for entityJson in result {
             let entity = Entity(name: entityJson["name"] as! String)
             entity.address = entityJson["address"] as! String
-            entity.description = entityJson["description_en"] as! String
+            entity.description_en = entityJson["description_en"] as! String
+            entity.description_es = entityJson["description_es"] as! String
             entity.image = entityJson["img"] as! String
             entity.logo = entityJson["logo_img"] as! String
-            entity.openingHours = entityJson["opening_hours_en"] as! String
+            entity.openingHours_en = entityJson["opening_hours_en"] as! String
+            entity.openingHours_es = entityJson["opening_hours_es"] as! String
             entity.type = type
             
             entity.longitude = convertToFloat(entityField:(entityJson["gps_lon"]! as! String))

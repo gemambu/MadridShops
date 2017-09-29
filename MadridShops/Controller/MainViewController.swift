@@ -7,11 +7,18 @@ class MainViewController: UIViewController {
     var context: NSManagedObjectContext!
     var viewHasBeenSet: Bool = false
     
+    @IBOutlet weak var shopsButton: UIButton!
+    @IBOutlet weak var activitiesButton: UIButton!
+    
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.shopsButton.isEnabled = false
+        self.activitiesButton.isEnabled = false
+
         
         //        let starPath = UIBezierPath()
         //        starPath.move(to: CGPoint(x: 180, y: 25))
@@ -44,8 +51,8 @@ class MainViewController: UIViewController {
                 print("show chiquito view")
                 self.performSegue(withIdentifier: "WarningViewSegue", sender: self)
             } else {
-                self.activityIndicatorView.isHidden = false
-                self.activityIndicatorView.startAnimating()
+                
+                self.displayActivityView()
                 
                 ExecuteOnceInteractorImpl().execute(closure: { initializeData() }, onSuccess: { hideActivityView() })
                 
@@ -56,10 +63,21 @@ class MainViewController: UIViewController {
         }
     }
     
+    func displayActivityView(){
+        self.shopsButton.isEnabled = false
+        self.activitiesButton.isEnabled = false
+        self.activityIndicatorView.isHidden = false
+        self.activityIndicatorView.startAnimating()
+        
+    }
+    
     func hideActivityView() {
         self.activityIndicatorView.isHidden = true
         self.activityIndicatorView.stopAnimating()
+        self.shopsButton.isEnabled = true
+        self.activitiesButton.isEnabled = true
     }
+    
     func initializeData() {
         
         let downloadEntitiesInteractor: DownloadAllEntitiesInteractor = DownloadAllEntitiesInteractorNSURLSessionImpl()
