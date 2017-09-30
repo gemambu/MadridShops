@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        
         // the buttons are hidden by default.
         // with this solution, user cannot click on them while the app is downloading the information
         self.view.subviews.map{ $0.isHidden = true }
