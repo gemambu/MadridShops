@@ -9,19 +9,18 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var shopsButton: UIButton!
     @IBOutlet weak var activitiesButton: UIButton!
-    
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
         // the buttons are hidden by default.
         // with this solution, user cannot click on them while the app is downloading the information
         self.view.subviews.map{ $0.isHidden = true }
-        
+                
         self.shopsButton.setTitle(NSLocalizedString("mainview.ShopsButton", comment:""),
                                       for: UIControlState.normal)
         self.activitiesButton.setTitle(NSLocalizedString("mainview.ActivitiesButton", comment:""),
@@ -34,6 +33,7 @@ class MainViewController: UIViewController {
         
         if (!self.viewHasBeenSet) {
             if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
+            //if true {
                 // no connection and no core data info
                 print("show chiquito view")
                 self.performSegue(withIdentifier: "WarningViewSegue", sender: self)

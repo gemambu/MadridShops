@@ -1,5 +1,5 @@
 import UIKit
-import SwiftGifOrigin
+
 
 class WarningViewController : UIViewController {
  
@@ -9,7 +9,10 @@ class WarningViewController : UIViewController {
     
     
     override func viewDidLoad() {
-//        let imageView = UIImageView()
-//        imageView.loadGif(url: chiquitoGif)
+	
+       let url = "https://los40sonlosnuevos30.files.wordpress.com/2016/06/chiquito-reverse.gif"
+        
+        url.loadImage(into: imageGif)
+        
     }
 }
