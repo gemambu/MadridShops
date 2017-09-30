@@ -11,7 +11,6 @@
 		5FD5E4C137936E4DE50B7C9D /* Pods_MadridShops.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150D39E549C4E8A7F64793C4 /* Pods_MadridShops.framework */; };
 		B60EF6511F61D006000BCB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6501F61D006000BCB96 /* AppDelegate.swift */; };
 		B60EF6531F61D006000BCB96 /* EntitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6521F61D006000BCB96 /* EntitiesViewController.swift */; };
-		B60EF6561F61D006000BCB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6541F61D006000BCB96 /* Main.storyboard */; };
 		B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6571F61D006000BCB96 /* Assets.xcassets */; };
 		B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */; };
 		B60EF6741F61D2DD000BCB96 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6731F61D2DD000BCB96 /* Shop.swift */; };
@@ -24,8 +23,10 @@
 		B60EF6871F641336000BCB96 /* ViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */; };
 		B60EF6891F6416D1000BCB96 /* EntityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6881F6416D1000BCB96 /* EntityCell.swift */; };
 		B6476D631F77B35F00C82974 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6476D621F77B35F00C82974 /* Resources.swift */; };
+		B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64D9B4F1F7F8FBF0065374F /* Localizable.strings */; };
 		B68B433C1F671228005B1A88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B68B433B1F671228005B1A88 /* Podfile */; };
 		B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B433D1F671DF9005B1A88 /* MainViewController.swift */; };
+		B698DB951F7EA185000ECDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B698DB931F7EA108000ECDBB /* Main.storyboard */; };
 		B69B66111F6C4F02004F8511 /* EntityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66101F6C4F02004F8511 /* EntityDetailViewController.swift */; };
 		B69B66141F6D20FB004F8511 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66131F6D20FB004F8511 /* String+Image.swift */; };
 		B69B66491F6D84C6004F8511 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69B66481F6D84C6004F8511 /* CoreData.framework */; };
@@ -46,6 +47,9 @@
 		B6B3CB541F6D86FB00E10694 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */; };
 		B6B3CB571F6D94C900E10694 /* SaveAllEntitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B3CB561F6D94C900E10694 /* SaveAllEntitiesInteractor.swift */; };
 		B6B3CB591F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B3CB581F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift */; };
+		B6C449741F7FB727006E55B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6C449761F7FB727006E55B1 /* InfoPlist.strings */; };
+		B6CF39741F7FFABD00A9B52C /* MapImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */; };
+		B6CF39761F7FFF3B00A9B52C /* ViewController+MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CF39751F7FFF3B00A9B52C /* ViewController+MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +71,6 @@
 		B60EF64D1F61D006000BCB96 /* MadridShops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridShops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60EF6501F61D006000BCB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B60EF6521F61D006000BCB96 /* EntitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesViewController.swift; sourceTree = "<group>"; };
-		B60EF6551F61D006000BCB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B60EF6571F61D006000BCB96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B60EF65A1F61D006000BCB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B60EF65C1F61D006000BCB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,9 +86,16 @@
 		B60EF6841F641109000BCB96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		B60EF6881F6416D1000BCB96 /* EntityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityCell.swift; sourceTree = "<group>"; };
+		B63586DB1F8010F500FDB5A1 /* shops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shops.png; sourceTree = "<group>"; };
+		B63586DC1F8010F600FDB5A1 /* activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activities.png; sourceTree = "<group>"; };
 		B6476D621F77B35F00C82974 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		B64D9B4B1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		B64D9B4C1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B64D9B4E1F7F8FBF0065374F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B64D9B501F7F8FC40065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B68B433B1F671228005B1A88 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B68B433D1F671DF9005B1A88 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B698DB941F7EA108000ECDBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B69B66101F6C4F02004F8511 /* EntityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailViewController.swift; sourceTree = "<group>"; };
 		B69B66131F6D20FB004F8511 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		B69B66481F6D84C6004F8511 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -106,8 +116,11 @@
 		B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B6B3CB561F6D94C900E10694 /* SaveAllEntitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllEntitiesInteractor.swift; sourceTree = "<group>"; };
 		B6B3CB581F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllEntitiesInteractorImpl.swift; sourceTree = "<group>"; };
-		B6E24BBD1F7D775A006D8770 /* events_pin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = events_pin.jpg; sourceTree = "<group>"; };
-		B6EC4B011F796A2E00EBA0EF /* chiquito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = chiquito.gif; path = ../../../../../../Downloads/chiquito.gif; sourceTree = "<group>"; };
+		B6C449751F7FB727006E55B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6C449771F7FB72A006E55B1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageLoader.swift; sourceTree = "<group>"; };
+		B6CF39751F7FFF3B00A9B52C /* ViewController+MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+MapViewController.swift"; sourceTree = "<group>"; };
+		B6CF39771F80090C00A9B52C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		E251F2ABD29E6D75CD9BC033 /* Pods-MadridShops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridShops.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +177,8 @@
 				B60EF6701F61D193000BCB96 /* Controller */,
 				B60EF68A1F64549E000BCB96 /* Assets */,
 				B60EF65C1F61D006000BCB96 /* Info.plist */,
+				B64D9B4F1F7F8FBF0065374F /* Localizable.strings */,
+				B6C449761F7FB727006E55B1 /* InfoPlist.strings */,
 			);
 			path = MadridShops;
 			sourceTree = "<group>";
@@ -186,6 +201,7 @@
 				B69B66101F6C4F02004F8511 /* EntityDetailViewController.swift */,
 				B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */,
 				B6A450C41F796402002B5186 /* WarningViewController.swift */,
+				B6CF39751F7FFF3B00A9B52C /* ViewController+MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,7 +209,7 @@
 		B60EF6711F61D19A000BCB96 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B60EF6541F61D006000BCB96 /* Main.storyboard */,
+				B698DB931F7EA108000ECDBB /* Main.storyboard */,
 				B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */,
 				B60EF6881F6416D1000BCB96 /* EntityCell.swift */,
 			);
@@ -247,8 +263,9 @@
 		B60EF68A1F64549E000BCB96 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B6E24BBD1F7D775A006D8770 /* events_pin.jpg */,
-				B6EC4B011F796A2E00EBA0EF /* chiquito.gif */,
+				B63586DC1F8010F600FDB5A1 /* activities.png */,
+				B63586DB1F8010F500FDB5A1 /* shops.png */,
+				B6CF39771F80090C00A9B52C /* background.png */,
 				B60EF6571F61D006000BCB96 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -261,6 +278,7 @@
 				B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */,
 				B6476D621F77B35F00C82974 /* Resources.swift */,
 				B6A450C21F795329002B5186 /* Reachability.swift */,
+				B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -379,6 +397,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = B60EF6441F61D006000BCB96;
 			productRefGroup = B60EF64E1F61D006000BCB96 /* Products */;
@@ -396,10 +415,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */,
+				B6C449741F7FB727006E55B1 /* InfoPlist.strings in Resources */,
+				B698DB951F7EA185000ECDBB /* Main.storyboard in Resources */,
 				B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */,
 				B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */,
 				B68B433C1F671228005B1A88 /* Podfile in Resources */,
-				B60EF6561F61D006000BCB96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,14 +476,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MadridShopsTests/Pods-MadridShopsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FillableLoaders/FillableLoaders.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FillableLoaders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,14 +531,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MadridShops/Pods-MadridShops-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FillableLoaders/FillableLoaders.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FillableLoaders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,9 +555,11 @@
 				B6A8595B1F744914009ECD3A /* MapPin.swift in Sources */,
 				B6A859551F7061EB009ECD3A /* SetExecutedOnceInteractor.swift in Sources */,
 				B60EF6891F6416D1000BCB96 /* EntityCell.swift in Sources */,
+				B6CF39741F7FFABD00A9B52C /* MapImageLoader.swift in Sources */,
 				B6B264E81F6B0D790031EBD0 /* JsonParser.swift in Sources */,
 				B6B3CB571F6D94C900E10694 /* SaveAllEntitiesInteractor.swift in Sources */,
 				B60EF6531F61D006000BCB96 /* EntitiesViewController.swift in Sources */,
+				B6CF39761F7FFF3B00A9B52C /* ViewController+MapViewController.swift in Sources */,
 				B6A450C31F795329002B5186 /* Reachability.swift in Sources */,
 				B6A859531F70614D009ECD3A /* ExecuteOnceInteractor.swift in Sources */,
 				B6A450C51F796402002B5186 /* WarningViewController.swift in Sources */,
@@ -586,20 +605,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B60EF6541F61D006000BCB96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B60EF6551F61D006000BCB96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B60EF65A1F61D006000BCB96 /* Base */,
+				B64D9B4C1F7F8F930065374F /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B64D9B4F1F7F8FBF0065374F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64D9B4E1F7F8FBF0065374F /* en */,
+				B64D9B501F7F8FC40065374F /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B698DB931F7EA108000ECDBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B698DB941F7EA108000ECDBB /* Base */,
+				B64D9B4B1F7F8F930065374F /* es */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B6C449761F7FB727006E55B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6C449751F7FB727006E55B1 /* en */,
+				B6C449771F7FB72A006E55B1 /* es */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -609,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -666,6 +706,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

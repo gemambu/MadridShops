@@ -5,7 +5,6 @@ import MapKit
 
 class EntitiesViewController: UIViewController {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var entitiesCollectionView: UICollectionView!
     
     var context: NSManagedObjectContext!
@@ -108,29 +107,6 @@ class EntitiesViewController: UIViewController {
         return _fetchedResultsController!
     }
     
-    // MARK: - Activity View
-    
-    func displayActivityView(){
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
-        self.view.subviews.map{ $0.isUserInteractionEnabled = false }
-        
-        self.activityIndicator.isHidden = false
-        self.activityIndicator.startAnimating()
-        
-    }
-    
-    func hideActivityView() {
-        
-        self.view.subviews.map{ $0.isUserInteractionEnabled = true }
-        self.view.subviews.map{ $0.isHidden = false }
-        
-        UIApplication.shared.endIgnoringInteractionEvents()
-        
-        self.activityIndicator.isHidden = true
-        self.activityIndicator.stopAnimating()
-        
-    }
     
 }
 
