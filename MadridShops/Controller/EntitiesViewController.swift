@@ -15,14 +15,14 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
     @IBOutlet weak var map: MKMapView!
     let locationManager = CLLocationManager()
 
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = self.type
+        let titleShop = NSLocalizedString("entitiesview.Shops", comment:"")
+        let titleActivity = NSLocalizedString("entitiesview.Activities", comment:"")
         
+        self.title = self.type == entityType[0] ? titleShop : titleActivity
+
         self.map.delegate = self
         
         self.entitiesCollectionView.delegate = self
@@ -128,6 +128,7 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
              if let annotationView = annotationView {
                 // 3
                 annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "events_pin.png")
                 annotationView.calloutOffset = CGPoint(x: -5, y: 5)
                 annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
 
@@ -147,11 +148,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         UIApplication.shared.beginIgnoringInteractionEvents()
         
-        if (UIApplication.shared.isIgnoringInteractionEvents) {
-        print("Is ignoring " )
-        } else {
-        print("Is NOT ignoring ")
-        }
         self.displayActivityView()
         
         self.view.addSubview(self.activityIndicator)

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  MadridShops
+
+  Created by Gema on 30/9/17.
+  Copyright © 2017 Gema. All rights reserved.
+*/
+"mainview.ShopsButton" = "Tiendas";
+"mainview.ActivitiesButton" = "Actividades";
+"entitiesview.Shops" = "Tiendas";
+"entitiesview.Activities" = "Actividades";
+"WarningTitle" = "¡Ups!";
+"WarningMessage" = "Lo sentimos, no se ha podido descargar la información. Por favor, revise la conexión. ¡Gracias!";
+

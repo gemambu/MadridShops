@@ -16,31 +16,16 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.shopsButton.isEnabled = false
-        self.activitiesButton.isEnabled = false
+        // the buttons are hidden by default.
+        // with this solution, user cannot click on them while the app is downloading the information
+        self.view.subviews.map{ $0.isHidden = true }
+        
+        self.shopsButton.setTitle(NSLocalizedString("mainview.ShopsButton", comment:""),
+                                      for: UIControlState.normal)
+        self.activitiesButton.setTitle(NSLocalizedString("mainview.ActivitiesButton", comment:""),
+                                       for: UIControlState.normal)
 
-        
-        //        let starPath = UIBezierPath()
-        //        starPath.move(to: CGPoint(x: 180, y: 25))
-        //        starPath.addLine(to: CGPoint(x: 195.16, y: 43.53))
-        //        starPath.addLine(to: CGPoint(x: 220.9, y: 49.88))
-        //        starPath.addLine(to: CGPoint(x: 204.54, y: 67.67))
-        //        starPath.addLine(to: CGPoint(x: 205.27, y: 90.12))
-        //        starPath.addLine(to: CGPoint(x: 180, y: 82.6))
-        //        starPath.addLine(to: CGPoint(x: 154.73, y: 90.12))
-        //        starPath.addLine(to: CGPoint(x: 155.46, y: 67.67))
-        //        starPath.addLine(to: CGPoint(x: 139.1, y: 49.88))
-        //        starPath.addLine(to: CGPoint(x: 164.84, y: 43.53))
-        //        starPath.close()
-        //        starPath.fill()
-        //
-        //        let myPath = starPath.cgPath
-        //        let myLoader = WavesLoader.showLoader(with: myPath)
-        //        self.view.addSubview(myLoader)
-        
     }
-    
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -57,25 +42,32 @@ class MainViewController: UIViewController {
                 ExecuteOnceInteractorImpl().execute(closure: { initializeData() }, onSuccess: { hideActivityView() })
                 
                 self.viewHasBeenSet = true
-
+                
             }
             
         }
     }
     
     func displayActivityView(){
-        self.shopsButton.isEnabled = false
-        self.activitiesButton.isEnabled = false
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        self.view.subviews.map{ $0.isUserInteractionEnabled = false }
+
         self.activityIndicatorView.isHidden = false
         self.activityIndicatorView.startAnimating()
         
     }
     
     func hideActivityView() {
+       
+        self.view.subviews.map{ $0.isUserInteractionEnabled = true }
+        self.view.subviews.map{ $0.isHidden = false }
+        
+        UIApplication.shared.endIgnoringInteractionEvents()
+        
         self.activityIndicatorView.isHidden = true
         self.activityIndicatorView.stopAnimating()
-        self.shopsButton.isEnabled = true
-        self.activitiesButton.isEnabled = true
+        
     }
     
     func initializeData() {
@@ -90,17 +82,15 @@ class MainViewController: UIViewController {
             let cacheInteractor = SaveAllEntitiesInteractorImpl()
             cacheInteractor.execute(entities: entities, context: self.context, onSuccess: { (entities: Entities)
                 in
-                print("Entities downloaded and saved correctly!")
+                print("☑️ Entities downloaded and saved correctly!")
                 
                 SetExecutedOnceInteractorImpl().execute()
                 
                 self.hideActivityView()
             })
-  
+            
         }
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is EntitiesViewController {

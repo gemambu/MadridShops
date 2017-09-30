@@ -42,6 +42,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Necesitamos tu localización para mejorar la experiencia de usuario :)</string>
+	<string>NSLocationWhenInUseUsageDescription</string>
 </dict>
 </plist>
