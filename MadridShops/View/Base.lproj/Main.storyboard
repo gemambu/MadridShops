@@ -40,42 +40,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-aC-Jyu" userLabel="Activities">
-                                <rect key="frame" x="61" y="436" width="280" height="58"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="activitiesButton">
-                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="ndP-YI-6s5"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
-                                <rect key="frame" x="61" y="188" width="253" height="58"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="shopsButton">
-                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="ihv-ex-rJN"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dwN-Bg-GY2" userLabel="activityIndicator">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="Xek-Xe-ajp">
+                                <rect key="frame" x="87.5" y="225.5" width="200" height="280"/>
+                                <subviews>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="PPQ-0x-9eV"/>
+                                            <constraint firstAttribute="height" constant="40" id="haT-Qw-yMb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="shopsButton">
+                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="ihv-ex-rJN"/>
+                                        </connections>
+                                    </button>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-aC-Jyu" userLabel="Activities">
+                                        <rect key="frame" x="0.0" y="240" width="200" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7TG-nX-srq"/>
+                                            <constraint firstAttribute="width" constant="200" id="MKg-47-bYT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="activitiesButton">
+                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="ndP-YI-6s5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yUe-Mc-56G" firstAttribute="height" secondItem="NI0-aC-Jyu" secondAttribute="height" id="DGu-C2-IpM"/>
+                                    <constraint firstItem="yUe-Mc-56G" firstAttribute="width" secondItem="NI0-aC-Jyu" secondAttribute="width" id="z3i-sN-ILz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="height" secondItem="yUe-Mc-56G" secondAttribute="height" id="2se-eV-0lq"/>
-                            <constraint firstItem="yUe-Mc-56G" firstAttribute="leading" secondItem="3Kt-8x-Q5e" secondAttribute="leading" constant="61" id="NWC-To-cfk"/>
-                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="leading" secondItem="3Kt-8x-Q5e" secondAttribute="leading" constant="61" id="Nm2-q2-5Li"/>
-                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="centerX" secondItem="3Kt-8x-Q5e" secondAttribute="centerX" id="puK-Y0-c6C"/>
-                            <constraint firstItem="yUe-Mc-56G" firstAttribute="top" secondItem="3Kt-8x-Q5e" secondAttribute="top" constant="124" id="qlh-ft-1I2"/>
-                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="top" secondItem="yUe-Mc-56G" secondAttribute="bottom" constant="190" id="x0G-5R-j77"/>
-                            <constraint firstItem="NI0-aC-Jyu" firstAttribute="width" secondItem="yUe-Mc-56G" secondAttribute="width" id="yyn-MO-5ya"/>
-                            <constraint firstItem="3Kt-8x-Q5e" firstAttribute="bottom" secondItem="NI0-aC-Jyu" secondAttribute="bottom" constant="173" id="zeT-OD-6iL"/>
+                            <constraint firstItem="Xek-Xe-ajp" firstAttribute="centerY" secondItem="3Kt-8x-Q5e" secondAttribute="centerY" id="gf3-VN-bUg"/>
+                            <constraint firstItem="Xek-Xe-ajp" firstAttribute="centerX" secondItem="3Kt-8x-Q5e" secondAttribute="centerX" id="o9l-C9-Rql"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Kt-8x-Q5e"/>
                     </view>
@@ -248,10 +260,6 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7Z-m5-5h8" userLabel="location">
-                                                <rect key="frame" x="0.0" y="262" width="359" height="185"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </mapView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yxw-EB-9zA" userLabel="address">
                                                 <rect key="frame" x="0.0" y="455" width="359" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -269,6 +277,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBK-um-Naf" userLabel="mapImage">
+                                                <rect key="frame" x="0.0" y="262" width="359" height="185"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <viewLayoutGuide key="safeArea" id="I6R-Sg-k3M"/>
@@ -303,7 +315,7 @@
                     <connections>
                         <outlet property="addressView" destination="yxw-EB-9zA" id="Oed-Y9-d6y"/>
                         <outlet property="descriptionView" destination="MwH-Wr-uMI" id="zAT-gN-1SO"/>
-                        <outlet property="location" destination="z7Z-m5-5h8" id="feK-m0-Uqv"/>
+                        <outlet property="mapImage" destination="KBK-um-Naf" id="1H8-Ld-Ske"/>
                         <outlet property="openingHoursView" destination="0c3-R2-mqJ" id="D9l-Ok-NDR"/>
                     </connections>
                 </viewController>

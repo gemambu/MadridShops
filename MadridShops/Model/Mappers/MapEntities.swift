@@ -35,5 +35,7 @@ func mapEntityIntoEntityCD(context: NSManagedObjectContext, entity: Entity) -> E
     entityCD.longitude = entity.longitude ?? 0.0
     entityCD.type = entity.type
     
+    
+    
     return entityCD
 }

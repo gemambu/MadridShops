@@ -1,8 +1,1 @@
-/* 
-  InfoPlist.strings
-  MadridShops
-
-  Created by Gema on 30/9/17.
-  Copyright © 2017 Gema. All rights reserved.
-*/
-"NSLocationWhenInUseUsageDescription" = "We need your location to improve the user experience :)";
+"LocationMessage" = "We need your location to improve the user experience :)";

@@ -45,7 +45,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         // OJO!!
         self.pin = self.type == entityType[0] ? pinType[0] : pinType[1]
-        
 
     }
     
@@ -69,7 +68,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
             vc.entity = mapEntityCDIntoEntity(entityCD: entityCD!)
         }
         
-
     }
     
     // MARK: - Fetched results controller
@@ -144,23 +142,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
         return nil
     }
     
-    func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
-        
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
-        self.displayActivityView()
-        
-        self.view.addSubview(self.activityIndicator)
-
-        
-    }
-    
-    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-        self.hideActivityView()
-        
-         UIApplication.shared.endIgnoringInteractionEvents()
-    }
-
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
@@ -168,21 +149,6 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
             performSegue(withIdentifier: "ShowEntityDetailSegue", sender: view.annotation as! MapPin)
         }
         
-    }
-    
-    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
-        
-        let scale = newWidth / image.size.width
-        let newHeight = image.size.height * scale
-        
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-        
-        
-        image.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
     }
     
 
@@ -202,13 +168,25 @@ class EntitiesViewController: UIViewController, CLLocationManagerDelegate, MKMap
     // MARK: - Activity View
     
     func displayActivityView(){
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        self.view.subviews.map{ $0.isUserInteractionEnabled = false }
+        
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
+        
     }
     
     func hideActivityView() {
+        
+        self.view.subviews.map{ $0.isUserInteractionEnabled = true }
+        self.view.subviews.map{ $0.isHidden = false }
+        
+        UIApplication.shared.endIgnoringInteractionEvents()
+        
         self.activityIndicator.isHidden = true
         self.activityIndicator.stopAnimating()
+        
     }
     
 }
