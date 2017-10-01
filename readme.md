@@ -49,8 +49,8 @@ From the Shop and Shop model class and core data shopCD, refactoring is done to 
 
 ### Additional features
 
-- Icon and background of the application. Generated with [logojoy.com] (https://logojoy.com). Assets generated with [makeappicon.com] (makeappicon.com)
-- _Easter egg_ sponsored by the wikiquote dedicated to [Gran Chiquito de la Calzada] (https://es.wikiquote.org/wiki/Chiquito_de_la_Calzada). The easter egg can be seen testing the non-connection of the device, and from the button of the community of Madrid that appears in the main screen :)
+- Icon and background of the application. Generated with [logojoy.com] (https://logojoy.com). Assets generated with [makeappicon.com](makeappicon.com)
+- _Easter egg_ sponsored by the wikiquote dedicated to [Gran Chiquito de la Calzada](https://es.wikiquote.org/wiki/Chiquito_de_la_Calzada). The easter egg can be seen testing the non-connection of the device, and from the button of the community of Madrid that appears in the main screen :)
 
 ### Possible improvements
  
