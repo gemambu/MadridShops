@@ -12,10 +12,10 @@ class WarningViewController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-            self.centerAlignFunButton.constant += self.view.bounds.width
-            self.view.layoutIfNeeded()
-        }, completion: nil)
+//        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+//            self.centerAlignFunButton.constant += self.view.bounds.width
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class WarningViewController : UIViewController {
         self.descEasterEgg.text = "easterEggDescription".localizedString()
         self.message.text = ""
         
-        self.centerAlignFunButton.constant -= view.bounds.width
+        //self.centerAlignFunButton.constant -= view.bounds.width
         
         self.funButton.clipsToBounds = true
         

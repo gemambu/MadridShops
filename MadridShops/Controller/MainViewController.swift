@@ -34,8 +34,9 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if (!self.viewHasBeenSet) {
-            if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
-                // no connection and no core data info
+//            if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
+            if true {
+            // no connection and no core data info
                 
                 let alert = UIAlertController(title: "WarningTitle".localizedString(), message: "WarningMessage".localizedString(), preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "optionOK".localizedString(), style: UIAlertActionStyle.default, handler: nil))
