@@ -13,7 +13,6 @@
 		B60EF6531F61D006000BCB96 /* EntitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6521F61D006000BCB96 /* EntitiesViewController.swift */; };
 		B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6571F61D006000BCB96 /* Assets.xcassets */; };
 		B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */; };
-		B60EF6741F61D2DD000BCB96 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6731F61D2DD000BCB96 /* Shop.swift */; };
 		B60EF6761F61D4EF000BCB96 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6751F61D4EF000BCB96 /* Entities.swift */; };
 		B60EF67B1F61DA8A000BCB96 /* EntitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67A1F61DA8A000BCB96 /* EntitiesTest.swift */; };
 		B60EF67E1F61E157000BCB96 /* DownloadAllEntitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67D1F61E157000BCB96 /* DownloadAllEntitiesInteractor.swift */; };
@@ -51,7 +50,6 @@
 		B6A859591F72EAFE009ECD3A /* ExecuteOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859581F72EAFE009ECD3A /* ExecuteOnceInteractorImpl.swift */; };
 		B6A8595B1F744914009ECD3A /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8595A1F744914009ECD3A /* MapPin.swift */; };
 		B6A8595F1F758234009ECD3A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8595E1F758234009ECD3A /* Entity.swift */; };
-		B6A859611F7582F3009ECD3A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A859601F7582F3009ECD3A /* Activity.swift */; };
 		B6B264E51F6B02BE0031EBD0 /* DownloadAllEntitiesInteractorNSOpImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E41F6B02BE0031EBD0 /* DownloadAllEntitiesInteractorNSOpImpl.swift */; };
 		B6B264E81F6B0D790031EBD0 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E71F6B0D790031EBD0 /* JsonParser.swift */; };
 		B6B264EA1F6B0FB40031EBD0 /* DownloadAllEntitiesInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B264E91F6B0FB40031EBD0 /* DownloadAllEntitiesInteractorNSURLSessionImpl.swift */; };
@@ -87,7 +85,6 @@
 		B60EF65C1F61D006000BCB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60EF6611F61D006000BCB96 /* MadridShopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadridShopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60EF6671F61D006000BCB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B60EF6731F61D2DD000BCB96 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		B60EF6751F61D4EF000BCB96 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		B60EF6791F61DA89000BCB96 /* MadridShopsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MadridShopsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		B60EF67A1F61DA8A000BCB96 /* EntitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesTest.swift; sourceTree = "<group>"; };
@@ -127,7 +124,6 @@
 		B6A859581F72EAFE009ECD3A /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		B6A8595A1F744914009ECD3A /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		B6A8595E1F758234009ECD3A /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		B6A859601F7582F3009ECD3A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		B6B264E41F6B02BE0031EBD0 /* DownloadAllEntitiesInteractorNSOpImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllEntitiesInteractorNSOpImpl.swift; sourceTree = "<group>"; };
 		B6B264E71F6B0D790031EBD0 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		B6B264E91F6B0FB40031EBD0 /* DownloadAllEntitiesInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllEntitiesInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
@@ -244,8 +240,6 @@
 				B6B264E61F6B0D610031EBD0 /* JsonParser */,
 				B60EF67C1F61E077000BCB96 /* Interactors */,
 				B6A8595E1F758234009ECD3A /* Entity.swift */,
-				B6A859601F7582F3009ECD3A /* Activity.swift */,
-				B60EF6731F61D2DD000BCB96 /* Shop.swift */,
 				B60EF6751F61D4EF000BCB96 /* Entities.swift */,
 				B60EF67F1F6404A1000BCB96 /* Typealias.swift */,
 				B69B664A1F6D8509004F8511 /* MadridShops.xcdatamodeld */,
@@ -581,7 +575,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60EF6741F61D2DD000BCB96 /* Shop.swift in Sources */,
 				B6A8595B1F744914009ECD3A /* MapPin.swift in Sources */,
 				B6A859551F7061EB009ECD3A /* SetExecutedOnceInteractor.swift in Sources */,
 				B60EF6891F6416D1000BCB96 /* EntityCell.swift in Sources */,
@@ -612,7 +605,6 @@
 				B60EF67E1F61E157000BCB96 /* DownloadAllEntitiesInteractor.swift in Sources */,
 				B6A859571F72EAD8009ECD3A /* SetExecutedOnceInteractorImpl.swift in Sources */,
 				B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */,
-				B6A859611F7582F3009ECD3A /* Activity.swift in Sources */,
 				B69B664C1F6D8509004F8511 /* MadridShops.xcdatamodeld in Sources */,
 				B69B66141F6D20FB004F8511 /* String+Image.swift in Sources */,
 			);

@@ -33,10 +33,6 @@ public class Entity {
         self.type = type
     }
     
-    func getType() -> String {
-        return ""
-    }
-    
     public func getDescription(language: String) -> String {
         return ((language == "") || (language == "en")) ? self.description_en : self.description_es
     }

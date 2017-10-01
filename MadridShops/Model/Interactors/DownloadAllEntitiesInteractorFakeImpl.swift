@@ -9,7 +9,7 @@ class DownloadAllEntitiesInteractorFakeImpl: DownloadAllEntitiesInteractor {
     func execute(onSuccess: @escaping (Entities) -> Void, onError: errorClosure = nil) {
         let entities = Entities()
         for i in 0...10 {
-            let entity = Shop(name: "Shop number \( i )")
+            let entity = Entity(name: "Shop number \( i )")
             entity.address = "Address \( i )"
             entity.description_en = "Description for Shop number \( i )"
             entity.openingHours_en = "Monday to Saturday 10:00 - 20:30"
@@ -20,7 +20,7 @@ class DownloadAllEntitiesInteractorFakeImpl: DownloadAllEntitiesInteractor {
         }
         
         for i in 0...10 {
-            let entity = Activity(name: "Activity number \( i )")
+            let entity = Entity(name: "Activity number \( i )")
             entity.address = "Address \( i )"
             entity.description_en = "Description for Activity number \( i )"
             entity.openingHours_en = "Monday to Saturday 10:00 - 20:30"

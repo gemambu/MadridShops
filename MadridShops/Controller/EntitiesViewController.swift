@@ -23,10 +23,10 @@ class EntitiesViewController: UIViewController {
                 self.title = titleEntities[1]
             case entityType[2]:
                 self.title = titleEntities[2]
-            case .none:
-                "Entity"
-            case .some(_):
-                "Entity"
+        case .none:
+            self.title = ""
+        case .some(_):
+            self.title = ""
         }
         
   
