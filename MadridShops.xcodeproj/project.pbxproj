@@ -25,9 +25,11 @@
 		B6476D631F77B35F00C82974 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6476D621F77B35F00C82974 /* Resources.swift */; };
 		B64AE95F1F801F450044D3C9 /* chiquitoQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */; };
 		B64AE9611F80E1640044D3C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B698DB931F7EA108000ECDBB /* Main.storyboard */; };
-		B64AE9621F80E16B0044D3C9 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = B63586DC1F8010F600FDB5A1 /* activities.png */; };
-		B64AE9631F80E16D0044D3C9 /* shops.png in Resources */ = {isa = PBXBuildFile; fileRef = B63586DB1F8010F500FDB5A1 /* shops.png */; };
 		B64AE9641F80E16F0044D3C9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CF39771F80090C00A9B52C /* background.png */; };
+		B64AE9661F80E6770044D3C9 /* String+NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AE9651F80E6770044D3C9 /* String+NSLocalizedString.swift */; };
+		B64AE9691F80E9D00044D3C9 /* showActivities.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AE9681F80E9CD0044D3C9 /* showActivities.png */; };
+		B64AE96A1F80E9D30044D3C9 /* showShops.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AE9671F80E9CD0044D3C9 /* showShops.png */; };
+		B64AE96C1F80ECB80044D3C9 /* ciquitoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AE96B1F80ECB40044D3C9 /* ciquitoButton.png */; };
 		B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64D9B4F1F7F8FBF0065374F /* Localizable.strings */; };
 		B68B433C1F671228005B1A88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B68B433B1F671228005B1A88 /* Podfile */; };
 		B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B433D1F671DF9005B1A88 /* MainViewController.swift */; };
@@ -90,10 +92,12 @@
 		B60EF6841F641109000BCB96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		B60EF6881F6416D1000BCB96 /* EntityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityCell.swift; sourceTree = "<group>"; };
-		B63586DB1F8010F500FDB5A1 /* shops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shops.png; sourceTree = "<group>"; };
-		B63586DC1F8010F600FDB5A1 /* activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activities.png; sourceTree = "<group>"; };
 		B6476D621F77B35F00C82974 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chiquitoQuotes.swift; sourceTree = "<group>"; };
+		B64AE9651F80E6770044D3C9 /* String+NSLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSLocalizedString.swift"; sourceTree = "<group>"; };
+		B64AE9671F80E9CD0044D3C9 /* showShops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showShops.png; sourceTree = "<group>"; };
+		B64AE9681F80E9CD0044D3C9 /* showActivities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showActivities.png; sourceTree = "<group>"; };
+		B64AE96B1F80ECB40044D3C9 /* ciquitoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ciquitoButton.png; sourceTree = "<group>"; };
 		B64D9B4B1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		B64D9B4C1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B64D9B4E1F7F8FBF0065374F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -205,8 +209,8 @@
 				B60EF6521F61D006000BCB96 /* EntitiesViewController.swift */,
 				B69B66101F6C4F02004F8511 /* EntityDetailViewController.swift */,
 				B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */,
-				B6A450C41F796402002B5186 /* WarningViewController.swift */,
 				B6CF39751F7FFF3B00A9B52C /* ViewController+MapViewController.swift */,
+				B6A450C41F796402002B5186 /* WarningViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,8 +272,9 @@
 		B60EF68A1F64549E000BCB96 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B63586DC1F8010F600FDB5A1 /* activities.png */,
-				B63586DB1F8010F500FDB5A1 /* shops.png */,
+				B64AE96B1F80ECB40044D3C9 /* ciquitoButton.png */,
+				B64AE9681F80E9CD0044D3C9 /* showActivities.png */,
+				B64AE9671F80E9CD0044D3C9 /* showShops.png */,
 				B6CF39771F80090C00A9B52C /* background.png */,
 				B60EF6571F61D006000BCB96 /* Assets.xcassets */,
 			);
@@ -285,6 +290,7 @@
 				B6A450C21F795329002B5186 /* Reachability.swift */,
 				B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */,
 				B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */,
+				B64AE9651F80E6770044D3C9 /* String+NSLocalizedString.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -421,12 +427,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64AE96C1F80ECB80044D3C9 /* ciquitoButton.png in Resources */,
 				B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */,
-				B64AE9631F80E16D0044D3C9 /* shops.png in Resources */,
-				B64AE9621F80E16B0044D3C9 /* activities.png in Resources */,
+				B64AE9691F80E9D00044D3C9 /* showActivities.png in Resources */,
 				B6C449741F7FB727006E55B1 /* InfoPlist.strings in Resources */,
 				B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */,
 				B64AE9611F80E1640044D3C9 /* Main.storyboard in Resources */,
+				B64AE96A1F80E9D30044D3C9 /* showShops.png in Resources */,
 				B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */,
 				B64AE9641F80E16F0044D3C9 /* background.png in Resources */,
 				B68B433C1F671228005B1A88 /* Podfile in Resources */,
@@ -576,6 +583,7 @@
 				B6476D631F77B35F00C82974 /* Resources.swift in Sources */,
 				B6B3CB591F6D955D00E10694 /* SaveAllEntitiesInteractorImpl.swift in Sources */,
 				B6A8595F1F758234009ECD3A /* Entity.swift in Sources */,
+				B64AE9661F80E6770044D3C9 /* String+NSLocalizedString.swift in Sources */,
 				B60EF6821F64051A000BCB96 /* DownloadAllEntitiesInteractorFakeImpl.swift in Sources */,
 				B6A859511F70538A009ECD3A /* MapEntities.swift in Sources */,
 				B60EF6761F61D4EF000BCB96 /* Entities.swift in Sources */,

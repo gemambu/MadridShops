@@ -19,7 +19,6 @@ class EntityDetailViewController: UIViewController {
         self.addressView.text = self.entity?.address
         
         loadImage(into: self.mapImage, latitude: (self.entity?.latitude)!, longitude:  (self.entity?.longitude)!)
-    
 
     }
     

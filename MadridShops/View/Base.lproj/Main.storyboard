@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,105 +14,11 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
         </array>
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="TtR-f2-V53">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4xc-6g-n8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="GDH-nW-7Bs" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wnh-DZ-b0G">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="DSJ-WF-nFX" kind="relationship" relationship="rootViewController" id="rZA-KO-18A"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-1103" y="45"/>
-        </scene>
-        <!--¡MAD!fail-->
-        <scene sceneID="Jab-aC-yhB">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bhQ-Ta-PtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="DSJ-WF-nFX" sceneMemberID="viewController">
-                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="8Gm-bJ-KPv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dwN-Bg-GY2" userLabel="activityIndicator">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-ex-VCN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="yeZ-ex-VCN" secondAttribute="height" multiplier="125:201" id="ghm-rI-qKh"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="Xek-Xe-ajp">
-                                <rect key="frame" x="87.5" y="225.5" width="200" height="280"/>
-                                <subviews>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-Mc-56G" userLabel="Shops">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="PPQ-0x-9eV"/>
-                                            <constraint firstAttribute="height" constant="40" id="haT-Qw-yMb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="shopsButton">
-                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="ihv-ex-rJN"/>
-                                        </connections>
-                                    </button>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-aC-Jyu" userLabel="Activities">
-                                        <rect key="frame" x="0.0" y="240" width="200" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="7TG-nX-srq"/>
-                                            <constraint firstAttribute="width" constant="200" id="MKg-47-bYT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="activitiesButton">
-                                            <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="ndP-YI-6s5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="yUe-Mc-56G" firstAttribute="height" secondItem="NI0-aC-Jyu" secondAttribute="height" id="DGu-C2-IpM"/>
-                                    <constraint firstItem="yUe-Mc-56G" firstAttribute="width" secondItem="NI0-aC-Jyu" secondAttribute="width" id="z3i-sN-ILz"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="yeZ-ex-VCN" firstAttribute="bottom" secondItem="3Kt-8x-Q5e" secondAttribute="bottom" id="HZu-kF-tuw"/>
-                            <constraint firstItem="yeZ-ex-VCN" firstAttribute="leading" secondItem="3Kt-8x-Q5e" secondAttribute="leading" id="cTj-3p-u5H"/>
-                            <constraint firstItem="Xek-Xe-ajp" firstAttribute="centerY" secondItem="3Kt-8x-Q5e" secondAttribute="centerY" id="gf3-VN-bUg"/>
-                            <constraint firstItem="yeZ-ex-VCN" firstAttribute="top" secondItem="3Kt-8x-Q5e" secondAttribute="top" id="gwC-od-yz0"/>
-                            <constraint firstItem="yeZ-ex-VCN" firstAttribute="trailing" secondItem="3Kt-8x-Q5e" secondAttribute="trailing" id="hiT-6R-KoL"/>
-                            <constraint firstItem="Xek-Xe-ajp" firstAttribute="centerX" secondItem="3Kt-8x-Q5e" secondAttribute="centerX" id="o9l-C9-Rql"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3Kt-8x-Q5e"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="¡MAD!fail" id="aAM-rx-5v2"/>
-                    <connections>
-                        <outlet property="activitiesButton" destination="NI0-aC-Jyu" id="fr1-GB-f95"/>
-                        <outlet property="activityIndicatorView" destination="dwN-Bg-GY2" id="S9D-EW-0sa"/>
-                        <outlet property="backgroundImage" destination="yeZ-ex-VCN" id="ykU-di-mw7"/>
-                        <outlet property="shopsButton" destination="yUe-Mc-56G" id="bti-Ul-VT3"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-364" y="45"/>
-        </scene>
         <!--¡Mad!-->
         <scene sceneID="Avn-u1-32T">
             <objects>
@@ -126,17 +31,17 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-ga-a14" userLabel="activities">
-                                <rect key="frame" x="50" y="423" width="77" height="84"/>
+                                <rect key="frame" x="57" y="444" width="77" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="activities.png"/>
+                                <state key="normal" title="Button" image="showActivities.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="TtP-xZ-vvy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7a-HA6" userLabel="shops">
-                                <rect key="frame" x="215" y="423" width="70" height="84"/>
+                                <rect key="frame" x="243" y="444" width="70" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="shops.png"/>
+                                <state key="normal" title="Button" image="showShops.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="np6-DQ-r5Z"/>
                                 </connections>
@@ -146,6 +51,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shopsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt4-Ff-1yB" userLabel="shopsLabel">
+                                <rect key="frame" x="248" y="536" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="activitiesLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I8-OO-nnH" userLabel="activitiesLabel">
+                                <rect key="frame" x="56" y="536" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -159,14 +78,17 @@
                     <navigationItem key="navigationItem" title="¡MAD!" id="BRs-jR-IHv"/>
                     <connections>
                         <outlet property="activitiesButton" destination="qRt-ga-a14" id="AkZ-7i-g5i"/>
+                        <outlet property="activitiesLabel" destination="3I8-OO-nnH" id="Q9z-qR-wC6"/>
                         <outlet property="activityIndicatorView" destination="dBF-m1-bRQ" id="bqJ-F2-brt"/>
                         <outlet property="backgroundImage" destination="Tac-sE-Xgz" id="bII-b0-oo9"/>
                         <outlet property="shopsButton" destination="kh8-7a-HA6" id="hqp-w7-ghB"/>
+                        <outlet property="shopsLabel" destination="tt4-Ff-1yB" id="CUe-qu-My5"/>
+                        <segue destination="DUp-1D-Olj" kind="show" identifier="EasterEggSegue" id="d0c-p9-FmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHI-2P-1Sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="800"/>
+            <point key="canvasLocation" x="-434.39999999999998" y="20.239880059970016"/>
         </scene>
         <!--¡Jarl!-->
         <scene sceneID="Gq6-JY-Vqp">
@@ -176,36 +98,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnY-Fa-B3o">
-                                <rect key="frame" x="87" y="532" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Quietor!">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-xe-WHX" userLabel="descEasterEgg">
+                                <rect key="frame" x="16" y="79" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="COS-LF-nmy" userLabel="quote">
+                                <rect key="frame" x="16" y="506" width="343" height="141"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnY-Fa-B3o">
+                                <rect key="frame" x="117" y="242" width="141" height="157"/>
+                                <state key="normal" image="ciquitoButton.png">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onClickedFunButton:" destination="DUp-1D-Olj" eventType="touchUpInside" id="grs-N2-aCq"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COS-LF-nmy" userLabel="quote">
-                                <rect key="frame" x="16" y="107" width="343" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TX2-UN-Z3v" firstAttribute="trailing" secondItem="COS-LF-nmy" secondAttribute="trailing" constant="16" id="2ab-qR-Vod"/>
+                            <constraint firstItem="COS-LF-nmy" firstAttribute="top" secondItem="TX2-UN-Z3v" secondAttribute="top" constant="413" id="5QT-81-KZk"/>
+                            <constraint firstItem="HnY-Fa-B3o" firstAttribute="centerX" secondItem="TX2-UN-Z3v" secondAttribute="centerX" id="7YT-6J-apK"/>
+                            <constraint firstItem="COS-LF-nmy" firstAttribute="centerX" secondItem="TX2-UN-Z3v" secondAttribute="centerX" id="D5p-Hr-HwW"/>
+                            <constraint firstItem="TX2-UN-Z3v" firstAttribute="bottom" secondItem="COS-LF-nmy" secondAttribute="bottom" constant="20" id="HEo-A0-3GY"/>
+                            <constraint firstItem="u8c-xe-WHX" firstAttribute="leading" secondItem="TX2-UN-Z3v" secondAttribute="leading" constant="16" id="KNp-vM-YGB"/>
+                            <constraint firstItem="TX2-UN-Z3v" firstAttribute="trailing" secondItem="u8c-xe-WHX" secondAttribute="trailing" constant="16" id="OwL-eM-rZg"/>
+                            <constraint firstItem="HnY-Fa-B3o" firstAttribute="top" secondItem="u8c-xe-WHX" secondAttribute="bottom" constant="35" id="TzJ-ND-aBE"/>
+                            <constraint firstItem="COS-LF-nmy" firstAttribute="leading" secondItem="TX2-UN-Z3v" secondAttribute="leading" constant="16" id="Vx0-Cd-mEY"/>
+                            <constraint firstItem="COS-LF-nmy" firstAttribute="top" secondItem="HnY-Fa-B3o" secondAttribute="bottom" priority="751" constant="70" id="hj2-H0-qM8"/>
+                            <constraint firstItem="u8c-xe-WHX" firstAttribute="centerX" secondItem="TX2-UN-Z3v" secondAttribute="centerX" id="jbn-Dz-WTs"/>
+                            <constraint firstItem="HnY-Fa-B3o" firstAttribute="top" secondItem="u8c-xe-WHX" secondAttribute="bottom" constant="35" id="oLL-hv-dY6"/>
+                            <constraint firstItem="u8c-xe-WHX" firstAttribute="top" secondItem="TX2-UN-Z3v" secondAttribute="top" constant="15" id="ptZ-eU-KqJ"/>
+                            <constraint firstItem="TX2-UN-Z3v" firstAttribute="bottom" secondItem="u8c-xe-WHX" secondAttribute="bottom" constant="460" id="yAh-eY-gY0"/>
+                            <constraint firstItem="COS-LF-nmy" firstAttribute="width" secondItem="u8c-xe-WHX" secondAttribute="width" id="yJx-iO-T5i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TX2-UN-Z3v"/>
                     </view>
                     <connections>
+                        <outlet property="centerAlignFunButton" destination="7YT-6J-apK" id="Lk2-M0-Rkw"/>
+                        <outlet property="descEasterEgg" destination="u8c-xe-WHX" id="trC-9v-Y6w"/>
                         <outlet property="funButton" destination="HnY-Fa-B3o" id="O9Q-7u-rCj"/>
                         <outlet property="message" destination="COS-LF-nmy" id="EFN-cv-6vK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eun-xa-7q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="850.52473763118451"/>
+            <point key="canvasLocation" x="-434.39999999999998" y="747.9760119940031"/>
         </scene>
         <!--Entities-->
         <scene sceneID="tne-QT-ifu">
@@ -301,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="83.208395802098963"/>
+            <point key="canvasLocation" x="455" y="20"/>
         </scene>
         <!--Entity Detail View Controller-->
         <scene sceneID="QLP-Bh-Y6C">
@@ -386,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5h-eb-cZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229.5999999999999" y="89.505247376311857"/>
+            <point key="canvasLocation" x="1230" y="20"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yQp-rt-HFh">
@@ -404,15 +350,16 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-1015" y="800"/>
+            <point key="canvasLocation" x="-1209" y="21"/>
         </scene>
     </scenes>
     <resources>
-        <image name="activities.png" width="176" height="202"/>
         <image name="background.png" width="391" height="482"/>
-        <image name="shops.png" width="158" height="202"/>
+        <image name="ciquitoButton.png" width="196" height="245"/>
+        <image name="showActivities.png" width="176" height="202"/>
+        <image name="showShops.png" width="158" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TtP-xZ-vvy"/>
+        <segue reference="np6-DQ-r5Z"/>
     </inferredMetricsTieBreakers>
 </document>

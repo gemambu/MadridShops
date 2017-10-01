@@ -11,21 +11,22 @@ class MainViewController: UIViewController {
     @IBOutlet weak var activitiesButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
+    @IBOutlet weak var shopsLabel: UILabel!
+    @IBOutlet weak var activitiesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
-        
         // the buttons are hidden by default.
         // with this solution, user cannot click on them while the app is downloading the information
         self.view.subviews.map{ $0.isHidden = true }
                 
-        self.shopsButton.setTitle(NSLocalizedString("mainview.ShopsButton", comment:""),
+        self.shopsButton.setTitle("mainview.ShopsButton".localizedString(),
                                       for: UIControlState.normal)
-        self.activitiesButton.setTitle(NSLocalizedString("mainview.ActivitiesButton", comment:""),
+        self.activitiesButton.setTitle("mainview.ActivitiesButton".localizedString(),
                                        for: UIControlState.normal)
+        self.shopsLabel.text="mainview.ShopsButton".localizedString()
+        self.activitiesLabel.text="mainview.ActivitiesButton".localizedString()
 
     }
     
@@ -34,10 +35,12 @@ class MainViewController: UIViewController {
         
         if (!self.viewHasBeenSet) {
             if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
-            //if true {
                 // no connection and no core data info
-                print("show chiquito view")
-                self.performSegue(withIdentifier: "WarningViewSegue", sender: self)
+                
+                let alert = UIAlertController(title: "WarningTitle".localizedString(), message: "WarningMessage".localizedString(), preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "optionOK".localizedString(), style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "optionEasterEgg".localizedString(), style: UIAlertActionStyle.default, handler:  { action in self.performSegue(withIdentifier: "EasterEggSegue", sender: self)}))
+                self.present(alert, animated: true, completion: nil)
             } else {
                 
                 self.displayActivityView()
