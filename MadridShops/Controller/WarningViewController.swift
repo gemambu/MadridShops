@@ -7,7 +7,7 @@ class WarningViewController : UIViewController {
     @IBOutlet weak var descEasterEgg: UITextView!
     @IBOutlet weak var funButton: UIButton!
     
-    @IBOutlet weak var centerAlignFunButton: NSLayoutConstraint!
+    //@IBOutlet weak var centerAlignFunButton: NSLayoutConstraint!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

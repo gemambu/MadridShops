@@ -29,17 +29,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" highlightedImage="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-sE-Xgz">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-ga-a14" userLabel="activities">
-                                <rect key="frame" x="57" y="444" width="77" height="84"/>
+                                <rect key="frame" x="57" y="400" width="77" height="128"/>
                                 <state key="normal" title="Button" image="showActivities.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="TtP-xZ-vvy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7a-HA6" userLabel="shops">
-                                <rect key="frame" x="243" y="444" width="70" height="84"/>
+                                <rect key="frame" x="243" y="400" width="70" height="128"/>
                                 <state key="normal" title="Button" image="showShops.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="np6-DQ-r5Z"/>
@@ -50,17 +50,25 @@
                                 <color key="color" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="shopsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt4-Ff-1yB" userLabel="shopsLabel">
-                                <rect key="frame" x="239" y="536" width="79" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <rect key="frame" x="228" y="536" width="116" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="activitiesLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I8-OO-nnH" userLabel="activitiesLabel">
-                                <rect key="frame" x="56" y="536" width="79" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="activitiesLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I8-OO-nnH" userLabel="activitiesLabel">
+                                <rect key="frame" x="34" y="536" width="122" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-29-hTt">
+                                <rect key="frame" x="309" y="614" width="50" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="madridEE.png"/>
+                                <connections>
+                                    <action selector="eastereggOnClicked:" destination="mF5-WI-BfJ" eventType="touchUpInside" id="ZFK-DJ-WyL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -85,7 +93,6 @@
                             <constraint firstItem="tt4-Ff-1yB" firstAttribute="leading" secondItem="3I8-OO-nnH" secondAttribute="trailing" constant="104" id="kxF-cR-ePN"/>
                             <constraint firstItem="3I8-OO-nnH" firstAttribute="top" secondItem="qRt-ga-a14" secondAttribute="bottom" constant="8" id="mkg-6f-Aph"/>
                             <constraint firstItem="3I8-OO-nnH" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" constant="56" id="qVM-0O-PeD"/>
-                            <constraint firstItem="kh8-7a-HA6" firstAttribute="centerX" secondItem="tt4-Ff-1yB" secondAttribute="centerX" id="sfg-Kz-TYI"/>
                             <constraint firstItem="kjl-hn-WEJ" firstAttribute="bottom" secondItem="3I8-OO-nnH" secondAttribute="bottom" constant="110" id="vyb-Zg-uH7"/>
                             <constraint firstItem="dBF-m1-bRQ" firstAttribute="centerX" secondItem="kjl-hn-WEJ" secondAttribute="centerX" id="wU7-fK-DO8"/>
                             <constraint firstItem="qRt-ga-a14" firstAttribute="centerX" secondItem="3I8-OO-nnH" secondAttribute="centerX" id="wxb-7t-n6I"/>
@@ -116,21 +123,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-xe-WHX" userLabel="descEasterEgg">
-                                <rect key="frame" x="16" y="80" width="343" height="174"/>
+                                <rect key="frame" x="16" y="36" width="343" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="COS-LF-nmy" userLabel="quote">
-                                <rect key="frame" x="16" y="466" width="343" height="181"/>
+                                <rect key="frame" x="16" y="422" width="343" height="225"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnY-Fa-B3o">
-                                <rect key="frame" x="131" y="296" width="114" height="126"/>
+                                <rect key="frame" x="131" y="296" width="114" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HnY-Fa-B3o" secondAttribute="height" multiplier="19:21" id="PT8-hu-baZ"/>
                                     <constraint firstAttribute="height" constant="126" id="bQs-0o-05d"/>
@@ -184,7 +191,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G8d-NI-Fvx" userLabel="Entites Collection View">
-                                <rect key="frame" x="0.0" y="364" width="375" height="303"/>
+                                <rect key="frame" x="0.0" y="342" width="375" height="325"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r5b-5f-ypV">
                                     <size key="itemSize" width="370" height="97"/>
@@ -243,7 +250,7 @@
                                 </cells>
                             </collectionView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPK-o7-Cip">
-                                <rect key="frame" x="0.0" y="64" width="375" height="303"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="325"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,10 +287,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQP-6S-xdg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDD-AJ-4jX" userLabel="Content View">
-                                        <rect key="frame" x="8" y="8" width="375" height="603"/>
+                                        <rect key="frame" x="8" y="8" width="375" height="647"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-Wr-uMI" userLabel="description">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="254"/>
@@ -369,6 +376,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="mF5-WI-BfJ" kind="relationship" relationship="rootViewController" id="bNn-Fj-F87"/>
+                        <segue destination="mF5-WI-BfJ" kind="show" identifier="ShowMadSegue" id="cqa-UW-ftE"/>
                     </connections>
                 </navigationController>
             </objects>
@@ -378,10 +386,12 @@
     <resources>
         <image name="background.png" width="391" height="482"/>
         <image name="ciquitoButton.png" width="196" height="245"/>
+        <image name="madridEE.png" width="339" height="216"/>
         <image name="showActivities.png" width="176" height="202"/>
         <image name="showShops.png" width="158" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="np6-DQ-r5Z"/>
+        <segue reference="cqa-UW-ftE"/>
     </inferredMetricsTieBreakers>
 </document>

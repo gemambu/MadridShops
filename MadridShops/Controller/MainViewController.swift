@@ -14,32 +14,33 @@ class MainViewController: UIViewController {
     @IBOutlet weak var shopsLabel: UILabel!
     @IBOutlet weak var activitiesLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // the buttons are hidden by default.
+        
+        // the buttons are disabled by default.
         // with this solution, user cannot click on them while the app is downloading the information
-        self.view.subviews.map{ $0.isHidden = true }
-                
+        self.view.subviews.map{ $0.isUserInteractionEnabled = false }
+        
+        
         self.shopsButton.setTitle("mainview.ShopsButton".localizedString(),
-                                      for: UIControlState.normal)
+                                  for: UIControlState.normal)
         self.activitiesButton.setTitle("mainview.ActivitiesButton".localizedString(),
                                        for: UIControlState.normal)
         self.shopsLabel.text="mainview.ShopsButton".localizedString()
         self.activitiesLabel.text="mainview.ActivitiesButton".localizedString()
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if (!self.viewHasBeenSet) {
-//            if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
-            if true {
-            // no connection and no core data info
-                
+            if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
+
+                // no connection and no core data info
                 let alert = UIAlertController(title: "WarningTitle".localizedString(), message: "WarningMessage".localizedString(), preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "optionOK".localizedString(), style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "optionOK".localizedString(), style: UIAlertActionStyle.default, handler: { action in self.viewDidAppear(true)}))
                 alert.addAction(UIAlertAction(title: "optionEasterEgg".localizedString(), style: UIAlertActionStyle.default, handler:  { action in self.performSegue(withIdentifier: "EasterEggSegue", sender: self)}))
                 self.present(alert, animated: true, completion: nil)
             } else {
@@ -59,16 +60,15 @@ class MainViewController: UIViewController {
         UIApplication.shared.beginIgnoringInteractionEvents()
         
         self.view.subviews.map{ $0.isUserInteractionEnabled = false }
-
+        
         self.activityIndicatorView.isHidden = false
         self.activityIndicatorView.startAnimating()
         
     }
     
     func hideActivityView() {
-       
+        
         self.view.subviews.map{ $0.isUserInteractionEnabled = true }
-        self.view.subviews.map{ $0.isHidden = false }
         
         UIApplication.shared.endIgnoringInteractionEvents()
         
@@ -110,5 +110,9 @@ class MainViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func eastereggOnClicked(_ sender: Any) {
+        self.performSegue(withIdentifier: "EasterEggSegue", sender: self)
     }
 }
