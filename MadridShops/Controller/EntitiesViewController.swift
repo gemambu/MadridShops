@@ -9,18 +9,27 @@ class EntitiesViewController: UIViewController {
     
     var context: NSManagedObjectContext!
     var type: String!
-    var pin: String!
-    
+
     @IBOutlet weak var map: MKMapView!
     let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let titleShop = NSLocalizedString("entitiesview.Shops", comment:"")
-        let titleActivity = NSLocalizedString("entitiesview.Activities", comment:"")
+        switch (self.type) {
+            case entityType[0]:
+                self.title = titleEntities[0]
+            case entityType[1]:
+                self.title = titleEntities[1]
+            case entityType[2]:
+                self.title = titleEntities[2]
+            case .none:
+                "Entity"
+            case .some(_):
+                "Entity"
+        }
         
-        self.title = self.type == entityType[0] ? titleShop : titleActivity
+  
 
         self.map.delegate = self
         
@@ -34,17 +43,12 @@ class EntitiesViewController: UIViewController {
         
         loadPins()
         
-        let madridLocation = CLLocation(latitude:40.41889 , longitude: -3.69194)
+        let madridLocation = CLLocation(latitude: 40.41889 , longitude: -3.69194)
         
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: MKCoordinateSpanMake(0.2, 0.2))
         
         self.map.setRegion(region, animated: true)
         self.map.setCenter(madridLocation.coordinate, animated: true)
-        
-        
-        // OJO!!
-        self.pin = self.type == entityType[0] ? pinType[0] : pinType[1]
-
     }
     
     

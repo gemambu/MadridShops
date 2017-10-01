@@ -1,9 +1,12 @@
 "mainview.ShopsButton" = "Tiendas";
 "mainview.ActivitiesButton" = "Actividades";
+
 "entitiesview.Shops" = "Tiendas";
 "entitiesview.Activities" = "Actividades";
+
 "WarningTitle" = "¡Ups!";
 "WarningMessage" = "Lo sentimos, no se ha podido descargar la información. Por favor, revise la conexión. ¡Gracias!";
+
 "optionOK" = "Ok";
 "optionEasterEgg" = "¡Sorprémdeme!";
-"easterEggDescription" = "Un poco de cultura de la Pradera mientras consigues conexión a la red para descargar la información. Pulsa sobre el botón, cobarder!";
+"easterEggDescription" = "Un poco de cultura de la Pradera mientras consigues conexión a la red para descargar la información. Pulsa sobre la imagen, cobarder!";

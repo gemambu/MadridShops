@@ -18,6 +18,7 @@ class DownloadAllEntitiesInteractorNSOpImpl: DownloadAllEntitiesInteractor {
                 
             self.downloadAndParseEntities(urlString: urlStringActivities, type: "Activity", onSuccess: onSuccess)
                 
+            
         
         }
     }

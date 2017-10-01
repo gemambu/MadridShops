@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-func mapEntityCDIntoEntity(entityCD: EntityCD) -> Entity {
+public func mapEntityCDIntoEntity(entityCD: EntityCD) -> Entity {
     let entity = Entity(name: entityCD.name!)
     
     entity.description_en = entityCD.description_en ?? ""
@@ -18,7 +18,7 @@ func mapEntityCDIntoEntity(entityCD: EntityCD) -> Entity {
     return entity
 }
 
-func mapEntityIntoEntityCD(context: NSManagedObjectContext, entity: Entity) -> EntityCD {
+public func mapEntityIntoEntityCD(context: NSManagedObjectContext, entity: Entity) -> EntityCD {
     
     // mapping entity into entityCD
     let entityCD = EntityCD(context: context)

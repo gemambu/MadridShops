@@ -15,7 +15,7 @@
 		B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60EF6591F61D006000BCB96 /* LaunchScreen.storyboard */; };
 		B60EF6741F61D2DD000BCB96 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6731F61D2DD000BCB96 /* Shop.swift */; };
 		B60EF6761F61D4EF000BCB96 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6751F61D4EF000BCB96 /* Entities.swift */; };
-		B60EF67B1F61DA8A000BCB96 /* ShopsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67A1F61DA8A000BCB96 /* ShopsTest.swift */; };
+		B60EF67B1F61DA8A000BCB96 /* EntitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67A1F61DA8A000BCB96 /* EntitiesTest.swift */; };
 		B60EF67E1F61E157000BCB96 /* DownloadAllEntitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67D1F61E157000BCB96 /* DownloadAllEntitiesInteractor.swift */; };
 		B60EF6801F6404A1000BCB96 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF67F1F6404A1000BCB96 /* Typealias.swift */; };
 		B60EF6821F64051A000BCB96 /* DownloadAllEntitiesInteractorFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6811F64051A000BCB96 /* DownloadAllEntitiesInteractorFakeImpl.swift */; };
@@ -31,6 +31,10 @@
 		B64AE96A1F80E9D30044D3C9 /* showShops.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AE9671F80E9CD0044D3C9 /* showShops.png */; };
 		B64AE96C1F80ECB80044D3C9 /* ciquitoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AE96B1F80ECB40044D3C9 /* ciquitoButton.png */; };
 		B64AE96E1F81047D0044D3C9 /* madridEE.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AE96D1F81047B0044D3C9 /* madridEE.png */; };
+		B64AE9731F8149660044D3C9 /* MadridShops.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B69B664A1F6D8509004F8511 /* MadridShops.xcdatamodeld */; };
+		B64AE9751F814ABA0044D3C9 /* MapEntitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AE96F1F81470F0044D3C9 /* MapEntitiesTest.swift */; };
+		B64AE9781F8154FC0044D3C9 /* NSLocalizedStringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AE9771F8154FC0044D3C9 /* NSLocalizedStringTest.swift */; };
+		B64AE97A1F81560C0044D3C9 /* JsonParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AE9791F81560C0044D3C9 /* JsonParserTest.swift */; };
 		B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64D9B4F1F7F8FBF0065374F /* Localizable.strings */; };
 		B68B433C1F671228005B1A88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B68B433B1F671228005B1A88 /* Podfile */; };
 		B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B433D1F671DF9005B1A88 /* MainViewController.swift */; };
@@ -86,7 +90,7 @@
 		B60EF6731F61D2DD000BCB96 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		B60EF6751F61D4EF000BCB96 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		B60EF6791F61DA89000BCB96 /* MadridShopsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MadridShopsTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		B60EF67A1F61DA8A000BCB96 /* ShopsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTest.swift; sourceTree = "<group>"; };
+		B60EF67A1F61DA8A000BCB96 /* EntitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesTest.swift; sourceTree = "<group>"; };
 		B60EF67D1F61E157000BCB96 /* DownloadAllEntitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllEntitiesInteractor.swift; sourceTree = "<group>"; };
 		B60EF67F1F6404A1000BCB96 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		B60EF6811F64051A000BCB96 /* DownloadAllEntitiesInteractorFakeImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllEntitiesInteractorFakeImpl.swift; sourceTree = "<group>"; };
@@ -100,6 +104,9 @@
 		B64AE9681F80E9CD0044D3C9 /* showActivities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showActivities.png; sourceTree = "<group>"; };
 		B64AE96B1F80ECB40044D3C9 /* ciquitoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ciquitoButton.png; sourceTree = "<group>"; };
 		B64AE96D1F81047B0044D3C9 /* madridEE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madridEE.png; sourceTree = "<group>"; };
+		B64AE96F1F81470F0044D3C9 /* MapEntitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEntitiesTest.swift; sourceTree = "<group>"; };
+		B64AE9771F8154FC0044D3C9 /* NSLocalizedStringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLocalizedStringTest.swift; sourceTree = "<group>"; };
+		B64AE9791F81560C0044D3C9 /* JsonParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTest.swift; sourceTree = "<group>"; };
 		B64D9B4B1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		B64D9B4C1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B64D9B4E1F7F8FBF0065374F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -198,8 +205,11 @@
 			isa = PBXGroup;
 			children = (
 				B60EF6671F61D006000BCB96 /* Info.plist */,
-				B60EF67A1F61DA8A000BCB96 /* ShopsTest.swift */,
+				B60EF67A1F61DA8A000BCB96 /* EntitiesTest.swift */,
 				B60EF6791F61DA89000BCB96 /* MadridShopsTests-Bridging-Header.h */,
+				B64AE96F1F81470F0044D3C9 /* MapEntitiesTest.swift */,
+				B64AE9771F8154FC0044D3C9 /* NSLocalizedStringTest.swift */,
+				B64AE9791F81560C0044D3C9 /* JsonParserTest.swift */,
 			);
 			path = MadridShopsTests;
 			sourceTree = "<group>";
@@ -287,13 +297,13 @@
 		B69B66121F6D20D3004F8511 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				B69B66131F6D20FB004F8511 /* String+Image.swift */,
 				B6B3CB531F6D86FB00E10694 /* CoreDataStack.swift */,
+				B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */,
+				B69B66131F6D20FB004F8511 /* String+Image.swift */,
 				B6476D621F77B35F00C82974 /* Resources.swift */,
 				B6A450C21F795329002B5186 /* Reachability.swift */,
-				B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */,
-				B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */,
 				B64AE9651F80E6770044D3C9 /* String+NSLocalizedString.swift */,
+				B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -612,7 +622,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60EF67B1F61DA8A000BCB96 /* ShopsTest.swift in Sources */,
+				B64AE97A1F81560C0044D3C9 /* JsonParserTest.swift in Sources */,
+				B64AE9751F814ABA0044D3C9 /* MapEntitiesTest.swift in Sources */,
+				B64AE9781F8154FC0044D3C9 /* NSLocalizedStringTest.swift in Sources */,
+				B60EF67B1F61DA8A000BCB96 /* EntitiesTest.swift in Sources */,
+				B64AE9731F8149660044D3C9 /* MadridShops.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

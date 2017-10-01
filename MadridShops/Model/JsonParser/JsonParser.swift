@@ -2,7 +2,7 @@
 import Foundation
 
 
-func parseEntities(data: Data, type: String) -> Entities {
+public func parseEntities(data: Data, type: String) -> Entities {
     let entities = Entities()
     do {
         let jsonObject = try JSONSerialization.jsonObject(with: data, options:
@@ -35,7 +35,7 @@ func parseEntities(data: Data, type: String) -> Entities {
     
 }
 
-func convertToFloat(entityField: String) -> Float {
+public func convertToFloat(entityField: String) -> Float {
     return Float(entityField
         .trimmingCharacters(in: .whitespaces)
         .replacingOccurrences(of: ",", with: ""))!

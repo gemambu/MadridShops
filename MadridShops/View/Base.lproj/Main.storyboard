@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svx-uk-yB8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svx-uk-yB8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,40 +28,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" highlightedImage="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-sE-Xgz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" highlightedImage="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-sE-Xgz">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-ga-a14" userLabel="activities">
-                                <rect key="frame" x="57" y="400" width="77" height="128"/>
-                                <state key="normal" title="Button" image="showActivities.png"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="TtP-xZ-vvy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7a-HA6" userLabel="shops">
-                                <rect key="frame" x="243" y="400" width="70" height="128"/>
-                                <state key="normal" title="Button" image="showShops.png"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="np6-DQ-r5Z"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-m1-bRQ" userLabel="activityIndicator">
+                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-m1-bRQ" userLabel="activityIndicator">
                                 <rect key="frame" x="169" y="392" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="shopsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt4-Ff-1yB" userLabel="shopsLabel">
-                                <rect key="frame" x="228" y="536" width="116" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="activitiesLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I8-OO-nnH" userLabel="activitiesLabel">
-                                <rect key="frame" x="34" y="536" width="122" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-29-hTt">
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-29-hTt" userLabel="easterEgg">
                                 <rect key="frame" x="309" y="614" width="50" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="madridEE.png"/>
@@ -69,34 +45,38 @@
                                     <action selector="eastereggOnClicked:" destination="mF5-WI-BfJ" eventType="touchUpInside" id="ZFK-DJ-WyL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-ga-a14" userLabel="activities">
+                                <rect key="frame" x="59" y="437" width="77" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="showActivities.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="TtP-xZ-vvy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7a-HA6" userLabel="shops">
+                                <rect key="frame" x="245" y="437" width="77" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="showShops.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="np6-DQ-r5Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shopsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt4-Ff-1yB" userLabel="shopsLabel">
+                                <rect key="frame" x="222" y="535" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="activitiesLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I8-OO-nnH" userLabel="activitiesLabel">
+                                <rect key="frame" x="36" y="535" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" id="1w8-0B-y6t"/>
-                            <constraint firstItem="tt4-Ff-1yB" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" constant="239" id="8DV-WX-Tyb"/>
-                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="bottom" secondItem="kjl-hn-WEJ" secondAttribute="bottom" id="Dhs-Sm-l81"/>
-                            <constraint firstItem="kh8-7a-HA6" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" constant="243" id="EFA-bt-z9l"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="trailing" secondItem="qRt-ga-a14" secondAttribute="trailing" constant="241" id="EKb-8r-9lq"/>
-                            <constraint firstItem="dBF-m1-bRQ" firstAttribute="centerY" secondItem="kjl-hn-WEJ" secondAttribute="centerY" id="GAd-bc-52A"/>
-                            <constraint firstItem="kh8-7a-HA6" firstAttribute="leading" secondItem="qRt-ga-a14" secondAttribute="trailing" constant="109" id="Hn3-Ip-HMF"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="trailing" secondItem="3I8-OO-nnH" secondAttribute="trailing" constant="240" id="Ken-KA-JoS"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="bottom" secondItem="kh8-7a-HA6" secondAttribute="bottom" constant="139" id="N3g-am-yoT"/>
-                            <constraint firstItem="tt4-Ff-1yB" firstAttribute="top" secondItem="kh8-7a-HA6" secondAttribute="bottom" constant="8" id="PP6-EY-Srw"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="bottom" secondItem="qRt-ga-a14" secondAttribute="bottom" constant="139" id="QpQ-Sf-FpB"/>
-                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="top" secondItem="Jgl-cf-GEe" secondAttribute="topMargin" id="UnR-ZM-u2o"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="trailing" secondItem="kh8-7a-HA6" secondAttribute="trailing" constant="62" id="ZCc-1P-56g"/>
-                            <constraint firstItem="kh8-7a-HA6" firstAttribute="top" secondItem="kjl-hn-WEJ" secondAttribute="top" constant="380" id="apU-Gg-qwa"/>
-                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="trailing" secondItem="kjl-hn-WEJ" secondAttribute="trailing" id="bKg-XP-ZBm"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="trailing" secondItem="tt4-Ff-1yB" secondAttribute="trailing" constant="57" id="cZV-u3-4sb"/>
-                            <constraint firstItem="qRt-ga-a14" firstAttribute="top" secondItem="kjl-hn-WEJ" secondAttribute="top" constant="380" id="fNd-N7-Rbo"/>
-                            <constraint firstItem="qRt-ga-a14" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" constant="57" id="ivL-xc-bJp"/>
-                            <constraint firstItem="tt4-Ff-1yB" firstAttribute="leading" secondItem="3I8-OO-nnH" secondAttribute="trailing" constant="104" id="kxF-cR-ePN"/>
-                            <constraint firstItem="3I8-OO-nnH" firstAttribute="top" secondItem="qRt-ga-a14" secondAttribute="bottom" constant="8" id="mkg-6f-Aph"/>
-                            <constraint firstItem="3I8-OO-nnH" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" constant="56" id="qVM-0O-PeD"/>
-                            <constraint firstItem="kjl-hn-WEJ" firstAttribute="bottom" secondItem="3I8-OO-nnH" secondAttribute="bottom" constant="110" id="vyb-Zg-uH7"/>
-                            <constraint firstItem="dBF-m1-bRQ" firstAttribute="centerX" secondItem="kjl-hn-WEJ" secondAttribute="centerX" id="wU7-fK-DO8"/>
-                            <constraint firstItem="qRt-ga-a14" firstAttribute="centerX" secondItem="3I8-OO-nnH" secondAttribute="centerX" id="wxb-7t-n6I"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kjl-hn-WEJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="¡MAD!" id="BRs-jR-IHv"/>
@@ -366,7 +346,6 @@
         <!--Navigation Controller-->
         <scene sceneID="yQp-rt-HFh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dij-7j-O9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svx-uk-yB8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eBN-oX-ULB">
@@ -379,6 +358,7 @@
                         <segue destination="mF5-WI-BfJ" kind="show" identifier="ShowMadSegue" id="cqa-UW-ftE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dij-7j-O9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1209" y="21"/>
         </scene>
@@ -391,7 +371,7 @@
         <image name="showShops.png" width="158" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="np6-DQ-r5Z"/>
+        <segue reference="TtP-xZ-vvy"/>
         <segue reference="cqa-UW-ftE"/>
     </inferredMetricsTieBreakers>
 </document>

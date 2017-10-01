@@ -9,8 +9,10 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var shopsButton: UIButton!
     @IBOutlet weak var activitiesButton: UIButton!
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     @IBOutlet weak var shopsLabel: UILabel!
     @IBOutlet weak var activitiesLabel: UILabel!
     
@@ -27,9 +29,10 @@ class MainViewController: UIViewController {
                                   for: UIControlState.normal)
         self.activitiesButton.setTitle("mainview.ActivitiesButton".localizedString(),
                                        for: UIControlState.normal)
+        
         self.shopsLabel.text="mainview.ShopsButton".localizedString()
         self.activitiesLabel.text="mainview.ActivitiesButton".localizedString()
-        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,16 +40,12 @@ class MainViewController: UIViewController {
         
         if (!self.viewHasBeenSet) {
             if (!Reachability.isConnectedToNetwork()) && (UserDefaults.standard.string(forKey: "once") == nil){
-
+                
                 // no connection and no core data info
-                let alert = UIAlertController(title: "WarningTitle".localizedString(), message: "WarningMessage".localizedString(), preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "optionOK".localizedString(), style: UIAlertActionStyle.default, handler: { action in self.viewDidAppear(true)}))
-                alert.addAction(UIAlertAction(title: "optionEasterEgg".localizedString(), style: UIAlertActionStyle.default, handler:  { action in self.performSegue(withIdentifier: "EasterEggSegue", sender: self)}))
-                self.present(alert, animated: true, completion: nil)
+                self.showNoConnectionAlert()
+                
             } else {
-                
                 self.displayActivityView()
-                
                 ExecuteOnceInteractorImpl().execute(closure: { initializeData() }, onSuccess: { hideActivityView() })
                 
                 self.viewHasBeenSet = true
@@ -54,6 +53,14 @@ class MainViewController: UIViewController {
             }
             
         }
+    }
+    
+    func showNoConnectionAlert() {
+        let alert = UIAlertController(title: "WarningTitle".localizedString(), message: "WarningMessage".localizedString(), preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "optionOK".localizedString(), style: UIAlertActionStyle.default, handler: { action in self.viewDidAppear(true)}))
+        alert.addAction(UIAlertAction(title: "optionEasterEgg".localizedString(), style: UIAlertActionStyle.default, handler:  { action in self.performSegue(withIdentifier: "EasterEggSegue", sender: self)}))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func displayActivityView(){
@@ -84,6 +91,7 @@ class MainViewController: UIViewController {
         downloadEntitiesInteractor.execute{ (entities: Entities) in
             // todo OK
             print("Name: " + entities.get(index: 0).name)
+            print("Entities saved: \(entities.count())")
             
             // save the entities in core data
             let cacheInteractor = SaveAllEntitiesInteractorImpl()
@@ -107,7 +115,7 @@ class MainViewController: UIViewController {
                 vc.type = entityType[0]
             } else if segue.identifier == "ShowActivitiesSegue" {
                 vc.type = entityType[1]
-            }
+            } 
         }
         
     }

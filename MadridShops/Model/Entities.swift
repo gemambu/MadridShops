@@ -10,8 +10,6 @@ public protocol EntitiesProtocol {
 
 public class Entities: EntitiesProtocol {
 
-
-    
     private var entityList: [Entity]?
     
     public init(){
