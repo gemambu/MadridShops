@@ -4,15 +4,19 @@ import UIKit
 class WarningViewController : UIViewController {
  
     @IBOutlet weak var message: UITextView!
-    @IBOutlet weak var imageGif: UIImageView!
-    
-    
+
+    @IBOutlet weak var funButton: UIButton!
     
     override func viewDidLoad() {
-	
-       let url = "https://los40sonlosnuevos30.files.wordpress.com/2016/06/chiquito-reverse.gif"
         
-        url.loadImage(into: imageGif)
-        
+        self.message.text = ""
     }
+    
+    @IBAction func onClickedFunButton(_ sender: Any) {
+        let diceRoll = Int(arc4random_uniform(UInt32(chiquito.count)))
+        self.message.text = chiquito[diceRoll]
+    }
+    
+    
+    
 }

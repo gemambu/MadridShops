@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GDH-nW-7Bs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svx-uk-yB8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,6 +20,7 @@
         <!--Navigation Controller-->
         <scene sceneID="TtR-f2-V53">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xc-6g-n8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="GDH-nW-7Bs" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wnh-DZ-b0G">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -29,14 +30,14 @@
                         <segue destination="DSJ-WF-nFX" kind="relationship" relationship="rootViewController" id="rZA-KO-18A"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4xc-6g-n8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="83"/>
+            <point key="canvasLocation" x="-1103" y="45"/>
         </scene>
-        <!--¡MAD!-->
+        <!--¡MAD!fail-->
         <scene sceneID="Jab-aC-yhB">
             <objects>
-                <viewController id="DSJ-WF-nFX" customClass="MainViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhQ-Ta-PtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="DSJ-WF-nFX" sceneMemberID="viewController">
                     <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="8Gm-bJ-KPv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,18 +103,70 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Kt-8x-Q5e"/>
                     </view>
-                    <navigationItem key="navigationItem" title="¡MAD!" id="aAM-rx-5v2"/>
+                    <navigationItem key="navigationItem" title="¡MAD!fail" id="aAM-rx-5v2"/>
                     <connections>
                         <outlet property="activitiesButton" destination="NI0-aC-Jyu" id="fr1-GB-f95"/>
                         <outlet property="activityIndicatorView" destination="dwN-Bg-GY2" id="S9D-EW-0sa"/>
                         <outlet property="backgroundImage" destination="yeZ-ex-VCN" id="ykU-di-mw7"/>
                         <outlet property="shopsButton" destination="yUe-Mc-56G" id="bti-Ul-VT3"/>
-                        <segue destination="DUp-1D-Olj" kind="show" identifier="WarningViewSegue" id="dNd-6b-NH9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bhQ-Ta-PtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="82.3088455772114"/>
+            <point key="canvasLocation" x="-364" y="45"/>
+        </scene>
+        <!--¡Mad!-->
+        <scene sceneID="Avn-u1-32T">
+            <objects>
+                <viewController title="¡Mad!" id="mF5-WI-BfJ" customClass="MainViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jgl-cf-GEe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" highlightedImage="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-sE-Xgz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-ga-a14" userLabel="activities">
+                                <rect key="frame" x="50" y="423" width="77" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="activities.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowActivitiesSegue" id="TtP-xZ-vvy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7a-HA6" userLabel="shops">
+                                <rect key="frame" x="215" y="423" width="70" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="shops.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowShopsSegue" id="np6-DQ-r5Z"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-m1-bRQ" userLabel="activityIndicator">
+                                <rect key="frame" x="169" y="392" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="leading" secondItem="kjl-hn-WEJ" secondAttribute="leading" id="1w8-0B-y6t"/>
+                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="bottom" secondItem="kjl-hn-WEJ" secondAttribute="bottom" id="Dhs-Sm-l81"/>
+                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="top" secondItem="Jgl-cf-GEe" secondAttribute="topMargin" id="UnR-ZM-u2o"/>
+                            <constraint firstItem="Tac-sE-Xgz" firstAttribute="trailing" secondItem="kjl-hn-WEJ" secondAttribute="trailing" id="bKg-XP-ZBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kjl-hn-WEJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="¡MAD!" id="BRs-jR-IHv"/>
+                    <connections>
+                        <outlet property="activitiesButton" destination="qRt-ga-a14" id="AkZ-7i-g5i"/>
+                        <outlet property="activityIndicatorView" destination="dBF-m1-bRQ" id="bqJ-F2-brt"/>
+                        <outlet property="backgroundImage" destination="Tac-sE-Xgz" id="bII-b0-oo9"/>
+                        <outlet property="shopsButton" destination="kh8-7a-HA6" id="hqp-w7-ghB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHI-2P-1Sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="800"/>
         </scene>
         <!--¡Jarl!-->
         <scene sceneID="Gq6-JY-Vqp">
@@ -123,30 +176,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COS-LF-nmy" userLabel="message">
-                                <rect key="frame" x="16" y="64" width="343" height="192"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnY-Fa-B3o">
+                                <rect key="frame" x="87" y="532" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quietor!">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedFunButton:" destination="DUp-1D-Olj" eventType="touchUpInside" id="grs-N2-aCq"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COS-LF-nmy" userLabel="quote">
+                                <rect key="frame" x="16" y="107" width="343" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem fistrum llevame al sircoo la caidita benemeritaar ahorarr está la cosa muy malar hasta luego Lucas te voy a borrar el cerito al ataquerl. Por la gloria de mi madre me cago en tus muelas benemeritaar pecador pecador. No puedor va usté muy cargadoo apetecan pecador no te digo trigo por no llamarte Rodrigor ahorarr ahorarr. Ese hombree de la pradera jarl no puedor. Ahorarr pecador apetecan pecador apetecan llevame al sircoo apetecan no puedor no te digo trigo por no llamarte Rodrigor ese hombree. Hasta luego Lucas tiene musho peligro sexuarl condemor. Condemor te voy a borrar el cerito caballo blanco caballo negroorl ese que llega pupita ahorarr me cago en tus muelas de la pradera no te digo trigo por no llamarte Rodrigor apetecan jarl. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chiquito.gif" translatesAutoresizingMaskIntoConstraints="NO" id="d5r-2C-JHB" userLabel="chiquitoGif">
-                                <rect key="frame" x="16" y="425" width="343" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="TX2-UN-Z3v"/>
                     </view>
                     <connections>
-                        <outlet property="imageGif" destination="d5r-2C-JHB" id="xr1-Ps-4mZ"/>
+                        <outlet property="funButton" destination="HnY-Fa-B3o" id="O9Q-7u-rCj"/>
                         <outlet property="message" destination="COS-LF-nmy" id="EFN-cv-6vK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eun-xa-7q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="850.52473763118451"/>
+            <point key="canvasLocation" x="796" y="850.52473763118451"/>
         </scene>
         <!--Entities-->
         <scene sceneID="tne-QT-ifu">
@@ -329,12 +388,31 @@
             </objects>
             <point key="canvasLocation" x="1229.5999999999999" y="89.505247376311857"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yQp-rt-HFh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dij-7j-O9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svx-uk-yB8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eBN-oX-ULB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mF5-WI-BfJ" kind="relationship" relationship="rootViewController" id="bNn-Fj-F87"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1015" y="800"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="activities.png" width="176" height="202"/>
         <image name="background.png" width="391" height="482"/>
-        <image name="chiquito.gif" width="300" height="300"/>
+        <image name="shops.png" width="158" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ihv-ex-rJN"/>
+        <segue reference="TtP-xZ-vvy"/>
     </inferredMetricsTieBreakers>
 </document>

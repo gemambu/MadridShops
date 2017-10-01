@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         
         // the buttons are hidden by default.
         // with this solution, user cannot click on them while the app is downloading the information

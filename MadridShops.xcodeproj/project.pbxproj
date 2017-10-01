@@ -23,10 +23,14 @@
 		B60EF6871F641336000BCB96 /* ViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6861F641336000BCB96 /* ViewController+CollectionViewController.swift */; };
 		B60EF6891F6416D1000BCB96 /* EntityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60EF6881F6416D1000BCB96 /* EntityCell.swift */; };
 		B6476D631F77B35F00C82974 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6476D621F77B35F00C82974 /* Resources.swift */; };
+		B64AE95F1F801F450044D3C9 /* chiquitoQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */; };
+		B64AE9611F80E1640044D3C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B698DB931F7EA108000ECDBB /* Main.storyboard */; };
+		B64AE9621F80E16B0044D3C9 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = B63586DC1F8010F600FDB5A1 /* activities.png */; };
+		B64AE9631F80E16D0044D3C9 /* shops.png in Resources */ = {isa = PBXBuildFile; fileRef = B63586DB1F8010F500FDB5A1 /* shops.png */; };
+		B64AE9641F80E16F0044D3C9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CF39771F80090C00A9B52C /* background.png */; };
 		B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64D9B4F1F7F8FBF0065374F /* Localizable.strings */; };
 		B68B433C1F671228005B1A88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B68B433B1F671228005B1A88 /* Podfile */; };
 		B68B433E1F671DF9005B1A88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B433D1F671DF9005B1A88 /* MainViewController.swift */; };
-		B698DB951F7EA185000ECDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B698DB931F7EA108000ECDBB /* Main.storyboard */; };
 		B69B66111F6C4F02004F8511 /* EntityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66101F6C4F02004F8511 /* EntityDetailViewController.swift */; };
 		B69B66141F6D20FB004F8511 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B66131F6D20FB004F8511 /* String+Image.swift */; };
 		B69B66491F6D84C6004F8511 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69B66481F6D84C6004F8511 /* CoreData.framework */; };
@@ -89,6 +93,7 @@
 		B63586DB1F8010F500FDB5A1 /* shops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shops.png; sourceTree = "<group>"; };
 		B63586DC1F8010F600FDB5A1 /* activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activities.png; sourceTree = "<group>"; };
 		B6476D621F77B35F00C82974 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chiquitoQuotes.swift; sourceTree = "<group>"; };
 		B64D9B4B1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		B64D9B4C1F7F8F930065374F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B64D9B4E1F7F8FBF0065374F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -279,6 +284,7 @@
 				B6476D621F77B35F00C82974 /* Resources.swift */,
 				B6A450C21F795329002B5186 /* Reachability.swift */,
 				B6CF39731F7FFABD00A9B52C /* MapImageLoader.swift */,
+				B64AE95E1F801F450044D3C9 /* chiquitoQuotes.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -416,10 +422,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B64D9B4D1F7F8FBF0065374F /* Localizable.strings in Resources */,
+				B64AE9631F80E16D0044D3C9 /* shops.png in Resources */,
+				B64AE9621F80E16B0044D3C9 /* activities.png in Resources */,
 				B6C449741F7FB727006E55B1 /* InfoPlist.strings in Resources */,
-				B698DB951F7EA185000ECDBB /* Main.storyboard in Resources */,
 				B60EF65B1F61D006000BCB96 /* LaunchScreen.storyboard in Resources */,
+				B64AE9611F80E1640044D3C9 /* Main.storyboard in Resources */,
 				B60EF6581F61D006000BCB96 /* Assets.xcassets in Resources */,
+				B64AE9641F80E16F0044D3C9 /* background.png in Resources */,
 				B68B433C1F671228005B1A88 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +580,7 @@
 				B6A859511F70538A009ECD3A /* MapEntities.swift in Sources */,
 				B60EF6761F61D4EF000BCB96 /* Entities.swift in Sources */,
 				B6B264E51F6B02BE0031EBD0 /* DownloadAllEntitiesInteractorNSOpImpl.swift in Sources */,
+				B64AE95F1F801F450044D3C9 /* chiquitoQuotes.swift in Sources */,
 				B60EF6871F641336000BCB96 /* ViewController+CollectionViewController.swift in Sources */,
 				B6B264EA1F6B0FB40031EBD0 /* DownloadAllEntitiesInteractorNSURLSessionImpl.swift in Sources */,
 				B6A859591F72EAFE009ECD3A /* ExecuteOnceInteractorImpl.swift in Sources */,
